@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Form, Button, Col } from 'react-bootstrap';
+import { Form, Button, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default class Signup extends Component {
@@ -50,6 +50,14 @@ export default class Signup extends Component {
 
             <Form.Group as={Col} controlId="formGridZip">
               <Form.Label>Zip</Form.Label>
+              <Form.Control />
+            </Form.Group>
+
+          </Form.Row>
+
+          <Form.Row>
+            <Form.Group as={Col} controlId="formGridEmergencyContact">
+              <Form.Label>Emergency Contact</Form.Label>
               <Form.Control />
             </Form.Group>
           </Form.Row>
