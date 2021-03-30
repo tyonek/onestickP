@@ -26,11 +26,29 @@ export default class NavBar extends Component {
             <NavDropdown.Item href="/instructorcourse" eventKey="4.5">Instructor Course</NavDropdown.Item>
           </NavDropdown>
 
-          <Nav.Item >
-            <Nav.Link href="/Login">
-              <Button variant="outline-danger">Apply Now</Button>{' '}
-            </Nav.Link>
-          </Nav.Item>
+          <Nav className="ml-auto">
+            
+            <Nav.Item >
+              <Nav.Link href="/Login">
+                <Button variant="outline-primary">Login</Button>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item >
+              <Nav.Link href="/signup">
+                <Button variant="outline-primary">Sign Up</Button>
+              </Nav.Link>
+            </Nav.Item>
+            <Nav.Item >
+              <Nav.Link href="/applynow">
+                <Button variant="outline-success">Apply Now</Button>
+              </Nav.Link>
+            </Nav.Item>
+           
+         </Nav>
+          
+
+         
+
 
         </Navbar>
       </div>
