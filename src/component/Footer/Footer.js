@@ -6,7 +6,7 @@ export default class Footer extends Component {
   render() {
     return (
       <div>
-        <Row style={{ position: "fixed", left: "0", bottom: "0", width: "100%", textAlign: "center", margin: "0"}}>
+        <Row >
           <Col>
             <Card>
               <Card.Footer>

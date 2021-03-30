@@ -38,7 +38,7 @@ export default class App extends Component {
             <Route path={'/aboutUs'} component={About} />
           </Switch>
         </div>
-        <div className="footer fixed-bottom" style={{height:"150px"}}>
+        <div className="footer position-sticky" >
         <Footer />
         </div>
       </div>
