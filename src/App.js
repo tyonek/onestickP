@@ -17,10 +17,10 @@ import { Row, Col } from 'react-bootstrap';
 export default class App extends Component {
   render(){
     return(
-      <div>
+      <div >
         <NavBar />
         
-        <div className="flex-shrink-0 mb-5">
+        <div style={{height:"auto", marginBottom:"170px" ,paddingBottom:"10px"}}>
           <Switch>
             <Route
               exact path={'/'}
@@ -38,7 +38,7 @@ export default class App extends Component {
             <Route path={'/aboutUs'} component={About} />
           </Switch>
         </div>
-        <div className="footer fixed-bottom">
+        <div className="footer fixed-bottom" style={{height:"150px"}}>
         <Footer />
         </div>
       </div>

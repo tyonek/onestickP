@@ -16,48 +16,79 @@ export default function Signup(props) {
   const [emergencyContact, setEmergencyContact] = useState('');
   const [emailError, setEmailError] = useState({ error: false, errorMessage: '' });
   const [passwordError, setpasswordError] = useState({ error: false, errorMessage: '' });
+  const [confirmPasswordError, setConfirmPasswordError] = useState({ error: false, errorMessage: '' });
   const [phoneNumberError, setPhoneNumberError] = useState({ error: false, errorMessage: '' });
+  const [FormError, setFormError] = useState({ error: false, errorMessage: "" });
   //const [addressErrror,setEmailError] = useState({error:false,errorMessage:''});
 
-  const emailVaildation = (email) => {
+  const emailValidation = (email) => {
     let emailFormate = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+
+
     if (!email || email === '') {
       setEmailError({ error: true, errorMessage: "Please Enter Email Address" })
+      return;
     }
     if (!emailFormate.test(String(email).toLowerCase())) {
       setEmailError({ error: true, errorMessage: "Please Enter A Valid Email Address" })
+      return;
     }
     else {
       setEmailError({ error: false, errorMessage: "" });
+      return;
     }
   }
 
-  const passwordVaildation = (password) => {
+  const passwordValidation = (password) => {
+
     if (!password || password === '') {
-      passwordError({ error: true, errorMessage: "Please Enter password Address" })
+      setpasswordError({ error: true, errorMessage: "Please Enter password Address" })
+      return;
     }
-    if (password !== confirmPassword) {
-      passwordError({ error: true, errorMessage: "Password Did not Match" })
+
+    else {
+      setpasswordError({ error: false, errorMessage: "" });
+      return;
     }
   }
 
-  const phoneNumberVaildation = (phone)=>{
-    const phoneNumberFormat = /^(\+\d{1,3}[- ]?)?\d{10}$/;
-    if(!phoneNumber || phoneNumber === ''){
-      setPhoneNumberError({ error: true, errorMessage: "Please Enter a Phone Number" })
+  const confirmPasswordValidation = (confirmPassword) => {
+    if (!confirmPassword || confirmPassword === '') {
+      setConfirmPasswordError({ error: true, errorMessage: "Please Confirm Password" })
     }
-    if(!phoneNumberFormat.test(phone)){
-      setPhoneNumberError({error:true,errorMessage:"Please Enter a Valid Phone Number"})
+    if (confirmPassword !== password) {
+      setConfirmPasswordError({ error: true, errorMessage: "Password didn't Match" })
+    }
+    else {
+      setConfirmPasswordError({ error: false, errorMessage: "" })
     }
   }
+
+  const phoneNumberValidation = (phone) => {
+    const phoneNumberFormat = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+    if (!phoneNumber || phoneNumber === '') {
+      setPhoneNumberError({ error: true, errorMessage: "Please Enter a Phone Number" })
+      return;
+    }
+    if (!phoneNumberFormat.test(phone)) {
+      setPhoneNumberError({ error: true, errorMessage: "Please Enter a Valid Phone Number" })
+      return;
+    }
+    else {
+      setPhoneNumberError({ error: false, errorMessage: "" })
+    }
+  }
+
+
+
 
 
 
   return (
     <div>
-      <Form className="container" onSubmit={(e) => {
+      <Form className="container pt-5 pb-5 px-4" onSubmit={(e) => {
         e.preventDefault();
-        const { streetAddress, phoneNumber, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN } = e.target
+        const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN } = e.target
         const studentInfo = {
           name: `${firstName} ${lastName}`,
           email,
@@ -65,109 +96,141 @@ export default function Signup(props) {
           phoneNumber,
           address: {
             streetAddress: `${streetAddress.value} ${apt.value}`,
-            state:state.value,
-            zipCode:zipCode.value,
-            city:city.value
+            state: state.value,
+            zipCode: zipCode.value,
+            city: city.value
           },
-          SSN:SSN.value,
-          emergencyContact: [{ emergencyContact:emergencyContact.value, emergencyContactPhone:emergencyContactPhone.value }]
+          SSN: SSN.value,
+          emergencyContact: [{ emergencyContact: emergencyContact.value, emergencyContactPhone: emergencyContactPhone.value }]
 
         }
+        if (!emailError.error && !passwordError.error && !confirmPasswordError.error && email && password) {
+          setFormError({ error: false, errorMessage: "" })
+          props.getStudentInfo(studentInfo);
+        }
+        else {
+          setFormError({ error: true, errorMessage: "Please complete the form correctly" })
+        };
 
-        props.getStudentInfo(studentInfo)
       }}>
+        <Form.Label>Full Name</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
-            <Form.Label>First Name</Form.Label>
-            <Form.Control type="text" placeholder="First Name" />
+            <Form.Control type="text" placeholder="First Name" onChange={e => {
+              setFirstName(e.target.value)
+            }} />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridLastName">
-            <Form.Label>Last Name</Form.Label>
-            <Form.Control type="text" placeholder="Last Name" />
+
+            <Form.Control type="text" placeholder="Last Name" onChange={e => setLastName(e.target.value)} />
           </Form.Group>
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
-            <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" onChange={e=> setEmail(e.target.value) } />
+            {emailError.error && <Form.Label className="text-danger">{emailError.errorMessage}</Form.Label>}
+
+            <Form.Control type="email" placeholder="Email" onBlur={(e) => {
+              emailValidation(e.target.value)
+
+            }} onChange={e => setEmail(e.target.value)} />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
-            <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
+            {passwordError.error && <Form.Label className="text-danger">{passwordError.errorMessage}</Form.Label>}
+            <Form.Control type="password" placeholder="Password" onBlur={(e) => {
+              passwordValidation(e.target.value)
+
+            }} onChange={e => setPassword(e.target.value)} />
           </Form.Group>
+
+        </Form.Row>
+
+        <Form.Row>
           <Form.Group as={Col} controlId="formGridConfirm Password">
-            <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="Confirm Password" onChange={e => setConfirmPassword(e.target.value)}  />
+            {confirmPasswordError.error && <Form.Label className="text-danger">{confirmPasswordError.errorMessage}</Form.Label>}
+
+            <Form.Control type="password" placeholder="Confirm Password" onBlur={(e) => {
+              confirmPasswordValidation(e.target.value)
+
+            }} onChange={e => setConfirmPassword(e.target.value)} />
           </Form.Group>
         </Form.Row>
         <Form.Row>
-        
-        <Form.Group as={Col} controlId="formGridPhoneNo"> 
-            <Form.Label>Phone</Form.Label>
+
+          <Form.Group as={Col} controlId="formGridPhoneNo">
+
             <Form.Control name="phoneNumber" type="text" placeholder="000-000-0000" onChange={e => setPhoneNumber(e.target.value)} />
-         </Form.Group>
-         </Form.Row>
+          </Form.Group>
+        </Form.Row>
 
-        
-         
-
-        <Form.Group controlId="formGridAddress1">
-          <Form.Label>Address</Form.Label>
-          <Form.Control name="streetAddress" placeholder="1234 Main St" />
-        </Form.Group>
-
-        <Form.Group controlId="formGridAddress2">
-          <Form.Label>Address 2</Form.Label>
-          <Form.Control name="apt" placeholder="Apartment, studio, or floor" />
-        </Form.Group>
-
-        <Form.Group controlId="formGridAddress2">
-          <Form.Label>SSN</Form.Label>
-          <Form.Control name="SSN" placeholder="###-##-####" />
-        </Form.Group>
-
+        <Form.Label>Address</Form.Label>
         <Form.Row>
-          <Form.Group as={Col} controlId="formGridCity">
-            <Form.Label>City</Form.Label>
-            <Form.Control name="city" />
+          <Form.Group as={Col} controlId="formGridAddress1">
+            <Form.Control name="streetAddress" placeholder="1234 Main St" />
           </Form.Group>
 
+          <Form.Group as={Col} controlId="formGridAddress2">
+
+            <Form.Control name="apt" placeholder="Apartment, studio, or floor" />
+          </Form.Group>
+          <Form.Group as={Col} controlId="formGridCity">
+
+            <Form.Control name="city" placeholder="City" />
+          </Form.Group>
+
+        </Form.Row>
+        <Form.Row>
+
+
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Label>State</Form.Label>
+            
             <Form.Control name="state" as="select" defaultValue="Choose...">
-              <option>Choose...</option>
+              <option value={null}>State...</option>
               {states.map((state, i) => {
-                return <option key={i}>{state}</option>
+                return <option key={i} value={state}>{state}</option>
               })}
 
             </Form.Control>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
-            <Form.Label>Zip</Form.Label>
-            <Form.Control name="zipCode" />
+            
+            <Form.Control name="zipCode" placeholder="Zip Code"/>
           </Form.Group>
 
         </Form.Row>
 
+
+
+        <Form.Group controlId="formGridAddress2">
+          <Form.Label>SSN</Form.Label>
+          <Form.Control name="SSN" placeholder="###-##-####" />
+        </Form.Group>
+
+
+
+        <Form.Label>Emergency Contact</Form.Label>
         <Form.Row>
+
           <Form.Group as={Col} controlId="formGridEmergencyContact">
-            <Form.Label>Emergency Contact</Form.Label>
+
             <Form.Control name="emergencyContact" placeholder="Name" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridEmergencyContact">
-            <Form.Label>Phone Number</Form.Label>
+
             <Form.Control name="emergencyContactPhone" placeholder="Phone #" />
           </Form.Group>
 
 
         </Form.Row>
-
-        <Button variant="primary" type="submit" >
-          Submit
+        {FormError.error && <Form.Label className="text-danger">{FormError.errorMessage}</Form.Label>}
+        <Form.Row>
+          <Button variant="primary" type="submit" >
+            Submit
           </Button>
+        </Form.Row>
+
       </Form>
 
     </div>
