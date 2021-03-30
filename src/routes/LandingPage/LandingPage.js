@@ -13,12 +13,11 @@ export default class LandingPage extends Component {
 	render() {
 			
 		return (
-			<main>
+			<main className="landingControl">
 
-			<div>
-				{/* <Header /> */}
-				<h1>OneStick Phlebotomy Service</h1>
-				<h2>Simple as "One & Done"</h2>
+			<div className="landingTop">
+				<h1 className="landingTitle">OneStick Phlebotomy Service</h1>
+				<h2 className="landingMotto">Simple as "One & Done"</h2>
 				</div>
 
 				<div className="slideshow">
