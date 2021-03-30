@@ -13,13 +13,10 @@ export default class Footer extends Component {
             Simple as "One & Done"
             </Card.Text>
             <Card.Text>
-              <Link to="Contact">Contact</Link>
+              <Link to="/contact">Contact</Link>
             </Card.Text>
             <Card.Text>
-              <Link to="AboutUs">About Us</Link>
-            </Card.Text>
-            <Card.Text>
-              <Link to="Services">Our Services</Link>
+              <Link to="/aboutUs">About Us</Link>
             </Card.Text>
           </Card.Body>
         </Card>
