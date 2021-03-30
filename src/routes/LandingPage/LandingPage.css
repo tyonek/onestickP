@@ -1,0 +1,6 @@
+.slideshow{
+  width: 70%;
+  margin: 0 auto;
+  border: 1px solid black;
+  box-shadow: .1rem 1.5rem 3rem .001rem;
+}

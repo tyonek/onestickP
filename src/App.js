@@ -10,6 +10,7 @@ import Paramedical_Examining from './component/Courses/Paramedical_Examining/Par
 import Medical_Assistant from './component/Courses/Medical_Assistant/Medical_Assistant';
 import Ceu from './component/Courses/CEU/Ceu';
 import Instructor_Course from './component/Courses/Instructor_Course/Instructor_Course';
+import Footer from '../src/component/Footer/Footer'
 export default class App extends Component {
   render(){
     return(
@@ -29,6 +30,7 @@ export default class App extends Component {
           <Route path={'/ceucourse'} component={Ceu} />
           <Route path={'/instructorcourse'} component={Instructor_Course} />
         </Switch>
+        <Footer />
       </div>
     )
   }
