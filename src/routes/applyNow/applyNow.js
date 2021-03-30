@@ -1,9 +1,14 @@
 import React from 'react'
 import SignUP from '../../component/Forms/Signup/Signup'
 function applyNow(props) {
+    const getStudentInfo = (studentInfo)=>{
+        console.log(studentInfo);
+    }
+
+
     return (
         <div>
-            <SignUP />
+            <SignUP getStudentInfo={getStudentInfo}/>
         </div>
     )
 }

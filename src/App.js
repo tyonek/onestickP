@@ -18,23 +18,28 @@ export default class App extends Component {
     return(
       <div>
         <NavBar />
-        <Switch>
-          <Route
-          exact path={'/'}
-          component={() => (
-            <LandingPage />
-          )} />
-          <Route path={'/login'} component={Login} />
-          <Route path={'/applynow'} component={ApplyNow} />
-          <Route path={'/phlebotomycourse'} component={Phlebotomy} />
-          <Route path={'/paramdeical_examiningcourse'} component={Paramedical_Examining} />
-          <Route path={'/medical_assistantcourse'} component={Medical_Assistant} />
-          <Route path={'/ceucourse'} component={Ceu} />
-          <Route path={'/instructorcourse'} component={Instructor_Course} />
-          <Route path={'/contact'} component={Contact} />
-          <Route path={'/aboutUs'} component={About} />
-        </Switch>
+        
+        <div className="flex-shrink-0 mb-5">
+          <Switch>
+            <Route
+              exact path={'/'}
+              component={() => (
+                <LandingPage />
+              )} />
+            <Route path={'/login'} component={Login} />
+            <Route path={'/applynow'} component={ApplyNow} />
+            <Route path={'/phlebotomycourse'} component={Phlebotomy} />
+            <Route path={'/paramdeical_examiningcourse'} component={Paramedical_Examining} />
+            <Route path={'/medical_assistantcourse'} component={Medical_Assistant} />
+            <Route path={'/ceucourse'} component={Ceu} />
+            <Route path={'/instructorcourse'} component={Instructor_Course} />
+            <Route path={'/contact'} component={Contact} />
+            <Route path={'/aboutUs'} component={About} />
+          </Switch>
+        </div>
+        <div className="footer fixed-bottom">
         <Footer />
+        </div>
       </div>
     )
   }

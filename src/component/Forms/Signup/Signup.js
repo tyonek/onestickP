@@ -4,17 +4,19 @@ import { Form, Button, Col, Row } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 
 export default function Signup(props) {
-  const states = 
-  ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
-  const [firstName,setFirstName]= useState('');
-  const [lastName, setLastName]= useState('');
+  const states =
+    ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfrimPassword] = ('');
+  const [confirmPassword, setConfrimPassword] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
   const [address, setAddress] = useState('');
   const [emergencyContact, setEmergencyContact] = useState('');
   const [emailError, setEmailError] = useState({ error: false, errorMessage: '' });
   const [passwordError, setpasswordError] = useState({ error: false, errorMessage: '' });
+  const [phoneNumberError, setPhoneNumberError] = useState({ error: false, errorMessage: '' });
   //const [addressErrror,setEmailError] = useState({error:false,errorMessage:''});
 
   const emailVaildation = (email) => {
@@ -39,16 +41,40 @@ export default function Signup(props) {
     }
   }
 
+  const phoneNumberVaildation = (phone)=>{
+    const phoneNumberFormat = /^(\+\d{1,3}[- ]?)?\d{10}$/;
+    if(!phoneNumber || phoneNumber === ''){
+      setPhoneNumberError({ error: true, errorMessage: "Please Enter a Phone Number" })
+    }
+    if(!phoneNumberFormat.test(phone)){
+      setPhoneNumberError({error:true,errorMessage:"Please Enter a Valid Phone Number"})
+    }
+  }
+
 
 
   return (
     <div>
-      <Form className="container" onSubmit={()=>{
+      <Form className="container" onSubmit={(e) => {
+        e.preventDefault();
+        const { streetAddress, phoneNumber, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN } = e.target
         const studentInfo = {
-          Name: `${firstName} ${lastName} `
+          name: `${firstName} ${lastName}`,
+          email,
+          password,
+          phoneNumber,
+          address: {
+            streetAddress: `${streetAddress.value} ${apt.value}`,
+            state:state.value,
+            zipCode:zipCode.value,
+            city:city.value
+          },
+          SSN:SSN.value,
+          emergencyContact: [{ emergencyContact:emergencyContact.value, emergencyContactPhone:emergencyContactPhone.value }]
+
         }
 
-        props.getStudentInfo()
+        props.getStudentInfo(studentInfo)
       }}>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
@@ -63,54 +89,64 @@ export default function Signup(props) {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             <Form.Label>Email</Form.Label>
-            <Form.Control type="email" placeholder="Enter email" />
+            <Form.Control type="email" placeholder="Enter email" onChange={e=> setEmail(e.target.value) } />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridPassword">
             <Form.Label>Password</Form.Label>
-            <Form.Control type="password" placeholder="Password" />
+            <Form.Control type="password" placeholder="Password" onChange={e => setPassword(e.target.value)} />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridConfirm Password">
             <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="Confirm Password" />
+            <Form.Control type="password" placeholder="Confirm Password" onChange={e => setConfrimPassword(e.target.value)}  />
           </Form.Group>
         </Form.Row>
+        <Form.Row>
+        
+        <Form.Group as={Col} controlId="formGridPhoneNo"> 
+            <Form.Label>Phone</Form.Label>
+            <Form.Control name="phoneNumber" type="text" placeholder="000-000-0000" onChange={e => setPhoneNumber(e.target.value)} />
+         </Form.Group>
+         </Form.Row>
+
+        
+         
 
         <Form.Group controlId="formGridAddress1">
           <Form.Label>Address</Form.Label>
-          <Form.Control placeholder="1234 Main St" />
+          <Form.Control name="streetAddress" placeholder="1234 Main St" />
         </Form.Group>
 
         <Form.Group controlId="formGridAddress2">
           <Form.Label>Address 2</Form.Label>
-          <Form.Control placeholder="Apartment, studio, or floor" />
+          <Form.Control name="apt" placeholder="Apartment, studio, or floor" />
         </Form.Group>
 
         <Form.Group controlId="formGridAddress2">
           <Form.Label>SSN</Form.Label>
-          <Form.Control placeholder="###-##-####" />
+          <Form.Control name="SSN" placeholder="###-##-####" />
         </Form.Group>
 
         <Form.Row>
           <Form.Group as={Col} controlId="formGridCity">
             <Form.Label>City</Form.Label>
-            <Form.Control />
+            <Form.Control name="city" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridState">
             <Form.Label>State</Form.Label>
-            <Form.Control as="select" defaultValue="Choose...">
+            <Form.Control name="state" as="select" defaultValue="Choose...">
               <option>Choose...</option>
-              { states.map((state,i)=>{
-                return<option key={i}>{state}</option>
+              {states.map((state, i) => {
+                return <option key={i}>{state}</option>
               })}
-           
+
             </Form.Control>
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
             <Form.Label>Zip</Form.Label>
-            <Form.Control />
+            <Form.Control name="zipCode" />
           </Form.Group>
 
         </Form.Row>
@@ -118,18 +154,18 @@ export default function Signup(props) {
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmergencyContact">
             <Form.Label>Emergency Contact</Form.Label>
-            <Form.Control placeholder="Name" />
+            <Form.Control name="emergencyContact" placeholder="Name" />
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridEmergencyContact">
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control placeholder="Phone #" />
+            <Form.Control name="emergencyContactPhone" placeholder="Phone #" />
           </Form.Group>
 
 
         </Form.Row>
 
-        <Button variant="primary" type="submit" disabled="true">
+        <Button variant="primary" type="submit" >
           Submit
           </Button>
       </Form>
