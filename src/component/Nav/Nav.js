@@ -33,11 +33,7 @@ export default class NavBar extends Component {
                 <Button variant="outline-primary">Login</Button>
               </Nav.Link>
             </Nav.Item>
-            <Nav.Item >
-              <Nav.Link href="/signup">
-                <Button variant="outline-primary">Sign Up</Button>
-              </Nav.Link>
-            </Nav.Item>
+        
             <Nav.Item >
               <Nav.Link href="/applynow">
                 <Button variant="outline-success">Apply Now</Button>
