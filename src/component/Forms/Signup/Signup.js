@@ -10,7 +10,7 @@ export default function Signup(props) {
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [confirmPassword, setConfrimPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [address, setAddress] = useState('');
   const [emergencyContact, setEmergencyContact] = useState('');
@@ -98,7 +98,7 @@ export default function Signup(props) {
           </Form.Group>
           <Form.Group as={Col} controlId="formGridConfirm Password">
             <Form.Label>Confirm Password</Form.Label>
-            <Form.Control type="password" placeholder="Confirm Password" onChange={e => setConfrimPassword(e.target.value)}  />
+            <Form.Control type="password" placeholder="Confirm Password" onChange={e => setConfirmPassword(e.target.value)}  />
           </Form.Group>
         </Form.Row>
         <Form.Row>
