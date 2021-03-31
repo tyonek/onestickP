@@ -20,7 +20,7 @@ import { Link } from 'react-router-dom';
 
 
     return (
-      <div>
+      <div style={{height:"60vh"}}>
         <Form onSubmit ={(e)=>{
           e.preventDefault();
           const {email,password}= e.target;
