@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Card, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../Footer/Footer.css';
 
 export default class Footer extends Component {
   render() {
@@ -8,7 +9,7 @@ export default class Footer extends Component {
       <div>
         <Row >
           <Col>
-            <Card>
+            <Card className="footer">
               <Card.Footer>
                 <Card.Title><Link to="/">OneStick Phlebotomy Service </Link></Card.Title>
                 <Card.Text>

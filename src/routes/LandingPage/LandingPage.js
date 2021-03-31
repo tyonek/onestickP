@@ -29,8 +29,9 @@ export default class LandingPage extends Component {
 								alt="First slide"
 							/>
 							<Carousel.Caption>
-								<h3>First slide label</h3>
-								<p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+								<h3 className="slideshowText_Header">Registration Now Open</h3>
+								<p className="slideshowText">For all courses, starting May 1st, 2021</p>
+								<Button href="/applynow" variant="danger">Apply Now</Button>
 							</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
