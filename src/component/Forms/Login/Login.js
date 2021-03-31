@@ -39,7 +39,7 @@ import { Link } from 'react-router-dom';
           </Button>
         </Form>
         <div>
-          <Link to="/signup">New User Sign Up</Link> | <Link to="ForgotPassword">Forgot Password</Link>
+          <Link to="ForgotPassword">Forgot Password</Link>
         </div> 
       </div>
 
