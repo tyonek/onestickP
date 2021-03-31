@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Col, Row } from 'react-bootstrap';
+import { Form, Button, Col, Row, Spinner } from 'react-bootstrap';
 
 import { Link } from 'react-router-dom';
 
@@ -113,6 +113,9 @@ export default function Signup(props) {
         };
 
       }}>
+      <Form.Row>
+      {props.error.error && <Form.Label className="text-danger">{props.error.errorMessage}</Form.Label>}
+      </Form.Row>
         <Form.Label>Full Name</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
@@ -226,9 +229,10 @@ export default function Signup(props) {
         </Form.Row>
         {FormError.error && <Form.Label className="text-danger">{FormError.errorMessage}</Form.Label>}
         <Form.Row>
-          <Button variant="primary" type="submit" >
+          {!props.isLoading && <Button variant="primary" type="submit" >
             Submit
-          </Button>
+          </Button>}
+          {props.isLoading && <Spinner animation="border" variant="primary" /> }
         </Form.Row>
 
       </Form>

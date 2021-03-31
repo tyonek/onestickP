@@ -1,20 +1,31 @@
-import React from 'react'
+import React, { useState } from 'react'
+import {withRouter} from 'react-router-dom'
 import SignUP from '../../component/Forms/Signup/Signup';
-import { getStudentsData, postStudentData}from '../../services/axios';
+import { getStudentsData, postStudentData } from '../../services/axios';
 
-function applyNow(props) {
-    const getStudentInfo = (studentInfo)=>{
-     console.log(studentInfo);
+function ApplyNow(props) {
+    const [isLoading, setIsLoading] = useState(false);
+    const [error, setError] = useState({ error: true, errorMessage: "" })
+    const getStudentInfo = (studentInfo) => {
 
-        postStudentData(studentInfo).then(res=>console.log(res.data)).catch(err=>console.log(err.response?.data));
+        setIsLoading(true)
+        postStudentData(studentInfo).then(res => {
+            setIsLoading(false);
+            props.history.push('/login');
+
+        }).catch(err => {
+            setIsLoading(false)
+            setError({ error: true, errorMessage: err.response?.data.errorMessage || 'Oops Something Went Wrong' })
+
+        });
     }
 
 
     return (
         <div>
-            <SignUP getStudentInfo={getStudentInfo}/>
+            <SignUP getStudentInfo={getStudentInfo} isLoading={isLoading} error={error} />
         </div>
     )
 }
 
-export default applyNow
+export default withRouter(ApplyNow)
