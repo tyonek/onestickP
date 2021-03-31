@@ -16,10 +16,20 @@ const postStudentData = (incomingData) => instance({
     'headers': {
         'content-type': 'application/json',
         
+    }})
+
+const loginUser = (incomingData) => instance({
+    'method': 'POST',
+    'url': '/login',
+    "data": incomingData,
+    'headers': {
+        'content-type': 'application/json',
+
     }
 })
 export {
     getStudentsData,
-    postStudentData
+    postStudentData,
+    loginUser
 
 }
