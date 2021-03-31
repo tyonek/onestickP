@@ -9,10 +9,13 @@ import { Link } from 'react-router-dom';
   const [loginError,setLoginError]= useState({error:false,errorMessage:""});
   
   const LoginUsers= (email,password)=>{
-    loginUser({email,password}).then(res=>{
-      window.sessionStorage('token',res.data.token)
-      props.history.push('/students/account');
-    }).catch(err=>setLoginError({error:true,errorMessage:err.response.data.errorMessage || "Oops Something Went Wrong"}))
+    setLoginError({error:false,errorMessage:""})
+    loginUser({email,password})
+    .then(res=>{
+      console.log(res);
+     window.sessionStorage.setItem('token',res.data?.token)
+    //  props.history.push('/students/account');
+    }).catch(err=>setLoginError({error:true,errorMessage:err.response?.data.errorMessage}))
   }
 
 
