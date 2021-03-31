@@ -5,7 +5,7 @@
 }
 
 .landingControl {
-  background-color: bisque;;
+  
 }
 
 .slideshow{
@@ -32,4 +32,20 @@
 
 .messageDescription {
   text-align: center;
+}
+
+.slideshowText_Header {
+ font-size: 50px;
+ color: rgb(216, 10, 10);
+ font-weight: bold;
+}
+
+.slideshowText {
+  font-weight: bold;
+  color: rgb(216, 10, 10);
+  font-size: 25px;
+}
+
+.d-block {
+  opacity: 90%;
 }

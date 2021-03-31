@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Container, Row, Image , Col } from 'react-bootstrap';
-import headshotblank from '../../../assets/photos/headshotblank.png';
+import headshotblank from '../../../assets/photos/headshot.jpeg';
+import '../../../routes/LandingPage/LandingPage.css';
 
 
 export default class About extends Component {
   render() {
     return (
-      <div>
-        <h1>About Us</h1>
+      <div className="landingTop">
+        <h1 className="landingTitle">About Us</h1>
         <Container>
           <Row>
-            <Col xs={1} >
-              <Image src={headshotblank} roundedCircle />
-            </Col>
-            <Col xs={1} >
-              <Image src={headshotblank} roundedCircle />
+            <Col>
+              <Image className="aboutHeadshot" alt="Vanessa&Shannon" src={headshotblank} roundedCircle />
             </Col>
           </Row>
         </Container>
-        <p>Shanon and Vanessa are natives of Philadelphia, PA. They both have careers in Phlebotomy and over 30 years of experience. 
+        <p className="courseDescription">Shanon and Vanessa are natives of Philadelphia, PA. They both have careers in Phlebotomy and over 30 years of experience. 
           Earlier on, Vanessa trained Shanon who was in school studying to be a Medical Laboratory Technologist (MLT) and unsure of which path to take. 
           With the dedication and support from close family, Vanessa was able to teach Shanon the phlebotomy techniques. 
           They both went on to earn certifications as Phlebotomy Instructors and have been best friends for over 30 years! 

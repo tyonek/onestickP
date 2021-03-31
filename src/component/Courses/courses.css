@@ -1,5 +1,5 @@
 .courseCard {
-margin-top: 5rem;
+padding-top: 5rem;
 }
 
 .courseTitle {
@@ -14,16 +14,27 @@ font-size: 40px;
 
 .coursePrice {
 text-align:center;
-margin-top: 20px;
+padding-top: 20px;
 font-size: 30px;
 }
 
 .courseDescription {
   text-align: center;
-  margin-top: 25px;
+  padding-top: 25px;
   font-size: 20px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .courseImg{
 
+}
+
+.aboutHeadshot {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  height: 30rem;
+  width: 30rem;
+  display: block;
+  margin: 0 auto;
 }
