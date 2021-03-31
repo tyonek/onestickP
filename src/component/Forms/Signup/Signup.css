@@ -1,9 +1,27 @@
 .signupControl {
   margin: 0 auto;
   text-align: center;
+
 }
 
 .signupHead {
   padding-top: 2.5rem;
   text-align: center;
+}
+
+.signupButton {
+  margin: 0 auto;
+}
+
+.signupInput {
+  text-align: center;
+  border: 0;
+  border: 2px solid black;
+  padding: 20px;
+}
+
+.contactInput {
+  border: 0;
+  border: 2px solid black;
+  padding: 20px;
 }

@@ -16,18 +16,19 @@
 }
 
 .landingTop{
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
+  padding-top: 1rem;
+  padding-bottom: 1.5rem;
   
 }
 .landingTitle {
  text-align: center;
  font-weight: bold;
+ font-size: 85px;
 }
 
 .landingMotto {
   text-align: center;
-  font-size: 20px;
+  font-size: 40px;
   
 }
 

@@ -149,39 +149,39 @@ export default function Signup(props) {
         <Form.Label>Full Name</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
-            <Form.Control type="text" placeholder="First Name" onChange={e => {
+            <Form.Control className="signupInput" type="text" placeholder="First Name" onChange={e => {
               setFirstName(e.target.value)
             }} />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridLastName">
-            <Form.Control type="text" placeholder="Last Name" onChange={e => setLastName(e.target.value)} />
+            <Form.Control className="signupInput" type="text" placeholder="Last Name" onChange={e => setLastName(e.target.value)} />
           </Form.Group>
         </Form.Row>
 
-        
+
         <Form.Label>Email Address</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             {emailError.error && <Form.Label className="text-danger">{emailError.errorMessage}</Form.Label>}
-            <Form.Control type="email" placeholder="Email" onBlur={(e) => {
+            <Form.Control className="signupInput" type="email" placeholder="Email" onBlur={(e) => {
               emailValidation(e.target.value)
             }} onChange={e => setEmail(e.target.value)} />
           </Form.Group>
-          </Form.Row>
+        </Form.Row>
 
-          <Form.Label>Password</Form.Label>
-          <Form.Row>
+        <Form.Label>Password</Form.Label>
+        <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             {passwordError.error && <Form.Label className="text-danger">{passwordError.errorMessage}</Form.Label>}
-            <Form.Control type="password" placeholder="Password" onBlur={(e) => {
+            <Form.Control className="signupInput" type="password" placeholder="Password" onBlur={(e) => {
               passwordValidation(e.target.value)
             }} onChange={e => setPassword(e.target.value)} />
           </Form.Group>
-      
+
           <Form.Group as={Col} controlId="formGridConfirm Password">
             {confirmPasswordError.error && <Form.Label className="text-danger">{confirmPasswordError.errorMessage}</Form.Label>}
 
-            <Form.Control type="password" placeholder="Confirm Password" onBlur={(e) => {
+            <Form.Control className="signupInput" type="password" placeholder="Confirm Password" onBlur={(e) => {
               confirmPasswordValidation(e.target.value)
 
             }} onChange={e => setConfirmPassword(e.target.value)} />
@@ -191,74 +191,57 @@ export default function Signup(props) {
         <Form.Label>Phone Number</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridPhoneNo">
-            <Form.Control name="phoneNumber" type="text" placeholder="( ### ) ###-####" onChange={e => setPhoneNumber(e.target.value)} />
+            <Form.Control className="signupInput" name="phoneNumber" type="text" placeholder="( ### ) ###-####" onChange={e => setPhoneNumber(e.target.value)} />
           </Form.Group>
         </Form.Row>
 
         <Form.Label>Address</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridAddress1">
-            <Form.Control name="streetAddress" placeholder="1234 Main St" />
+            <Form.Control className="signupInput" name="streetAddress" placeholder="1234 Main St" />
           </Form.Group>
-
           <Form.Group as={Col} controlId="formGridAddress2">
-
-            <Form.Control name="apt" placeholder="Apartment, studio, or floor" />
+            <Form.Control className="signupInput" name="apt" placeholder="Apartment, studio, or floor" />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridCity">
-
-            <Form.Control name="city" placeholder="City" />
+            <Form.Control className="signupInput" name="city" placeholder="City" />
           </Form.Group>
-
         </Form.Row>
         <Form.Row>
-
-
           <Form.Group as={Col} controlId="formGridState">
-
-            <Form.Control name="state" as="select" defaultValue="Choose...">
+            <Form.Control className="signupInput" name="state" as="select" defaultValue="Choose...">
               <option value={null}>State...</option>
               {states.map((state, i) => {
                 return <option key={i} value={state}>{state}</option>
               })}
-
             </Form.Control>
           </Form.Group>
-
           <Form.Group as={Col} controlId="formGridZip">
-
-            <Form.Control name="zipCode" placeholder="Zip Code" />
+            <Form.Control className="signupInput" name="zipCode" placeholder="Zip Code" />
           </Form.Group>
-
         </Form.Row>
-
-
-
         <Form.Group controlId="formGridAddress2">
+
           <Form.Label>SSN</Form.Label>
-          <Form.Control name="SSN" placeholder="###-##-####" />
+          <Form.Control className="signupInput" name="SSN" placeholder="###-##-####" />
         </Form.Group>
 
 
 
         <Form.Label>Emergency Contact</Form.Label>
         <Form.Row>
-
           <Form.Group as={Col} controlId="formGridEmergencyContact">
-
-            <Form.Control name="emergencyContact" placeholder="Name" />
+            <Form.Control className="signupInput" name="emergencyContact" placeholder="Name" />
           </Form.Group>
-
           <Form.Group as={Col} controlId="formGridEmergencyContact">
-
-            <Form.Control name="emergencyContactPhone" placeholder="Phone #" />
+            <Form.Control className="signupInput" name="emergencyContactPhone" placeholder="Phone #" />
           </Form.Group>
 
 
         </Form.Row>
         {FormError.error && <Form.Label className="text-danger">{FormError.errorMessage}</Form.Label>}
         <Form.Row>
-          {!props.isLoading && <Button className="signupButton w-50" as={Col} variant="primary" type="submit" >
+          {!props.isLoading && <Button className="signupButton w-50" variant="danger" type="submit" >
             Submit
           </Button>}
           {props.isLoading && <Spinner animation="border" variant="primary" />}

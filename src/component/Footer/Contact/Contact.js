@@ -17,17 +17,17 @@ export default class Contact extends Component {
           <Form.Row>
           <Form.Group as={Col} controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
-            <Form.Control type="email" placeholder="Email" />
+            <Form.Control className="contactInput" type="email" placeholder="Email" />
           </Form.Group>
           <Form.Group as={Col} controlId="formPhoneNumber">
             <Form.Label>Phone Number</Form.Label>
-            <Form.Control placeholder="( ### ) ###-#### " />
+            <Form.Control className="contactInput" placeholder="( ### ) ###-#### " />
           </Form.Group>
           </Form.Row>
 
           <Form.Group controlId="formBasicMessage">
             <Form.Label>Message</Form.Label>
-            <Form.Control as="textarea" placeholder="Message..." rows={4} />
+            <Form.Control className="contactInput" as="textarea" placeholder="Message..." rows={4} />
           </Form.Group>
           <Button className="contactButton" variant="danger" type="submit">
             Send Message

@@ -42,8 +42,8 @@ import '../Login/Login.css';
             Login
           </Button>
         </Form>
-        <div className="forgotPass">
-          <Link to="ForgotPassword">Forgot Password</Link> | <Link to="/applynow">Register</Link>
+        <div >
+          <Link className="forgotPass" to="ForgotPassword">Forgot Password</Link> | <Link className="forgotPass" to="/applynow">Register</Link>
         </div> 
       </div>
 
