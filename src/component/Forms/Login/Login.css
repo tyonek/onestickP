@@ -1,0 +1,26 @@
+.loginControl{ 
+  padding-top: 8.5rem; 
+  margin: 0 auto;
+  width: 80%;
+  text-align: center;
+}
+
+.inputStyle {
+  margin: 0 auto;
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid black;
+  text-align: center;
+  width: 30%;
+  padding: 20px;
+}
+
+.forgotPass {
+  margin-top: 2.5rem;
+  text-decoration: none;
+  color: black;
+}
+
+.loginButton {
+  margin-top: 20px;
+}

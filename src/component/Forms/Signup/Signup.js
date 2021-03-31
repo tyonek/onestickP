@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { Form, Button, Col, Row, Spinner } from 'react-bootstrap';
-
+import { Form, Button, Col, Row, Spinner, Popover, OverlayTrigger } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import '../Signup/Signup.css';
 
 export default function Signup(props) {
   const states =
@@ -77,7 +77,34 @@ export default function Signup(props) {
     else {
       setPhoneNumberError({ error: false, errorMessage: "" })
     }
-  }
+  };
+
+  const popover = (
+    <Popover id="popover-basic">
+      <Popover.Title as="h3">Admission Requirements</Popover.Title>
+      <Popover.Content>
+        Must have a high school diploma or a GED copy submitted to CareHire by 1st day of training.
+        </Popover.Content>
+      <Popover.Content>
+        18 years of age
+        </Popover.Content>
+      <Popover.Content>
+        Valid State issued picture identification.
+        </Popover.Content>
+      <Popover.Content>
+        Complete and signed Enrollment Agreement and Student payment plan/late fee agreement for the registered course.
+        </Popover.Content>
+      <Popover.Content>
+        Student Payment Agreement must be signed before the 1st day of class.
+      </Popover.Content>
+    </Popover>
+  );
+
+  const Example = () => (
+    <OverlayTrigger trigger="click" placement="bottom" overlay={popover}>
+      <Button variant="link">Here</Button>
+    </OverlayTrigger>
+  );
 
 
 
@@ -85,7 +112,9 @@ export default function Signup(props) {
 
 
   return (
-    <div>
+    <div className="signupControl">
+      <h3 className="signupHead">Please review the admission requirements before submitting an application. By clicking{<Example />}</h3>
+
       <Form className="container pt-5 pb-5 px-4" onSubmit={(e) => {
         e.preventDefault();
         const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN } = e.target
@@ -113,9 +142,10 @@ export default function Signup(props) {
         };
 
       }}>
-      <Form.Row>
-      {props.error.error && <Form.Label className="text-danger">{props.error.errorMessage}</Form.Label>}
-      </Form.Row>
+        <Form.Row>
+          {props.error.error && <Form.Label className="text-danger">{props.error.errorMessage}</Form.Label>}
+        </Form.Row>
+
         <Form.Label>Full Name</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridFirstName">
@@ -124,31 +154,30 @@ export default function Signup(props) {
             }} />
           </Form.Group>
           <Form.Group as={Col} controlId="formGridLastName">
-
             <Form.Control type="text" placeholder="Last Name" onChange={e => setLastName(e.target.value)} />
           </Form.Group>
         </Form.Row>
+
+        
+        <Form.Label>Email Address</Form.Label>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridEmail">
             {emailError.error && <Form.Label className="text-danger">{emailError.errorMessage}</Form.Label>}
-
             <Form.Control type="email" placeholder="Email" onBlur={(e) => {
               emailValidation(e.target.value)
-
             }} onChange={e => setEmail(e.target.value)} />
           </Form.Group>
+          </Form.Row>
 
+          <Form.Label>Password</Form.Label>
+          <Form.Row>
           <Form.Group as={Col} controlId="formGridPassword">
             {passwordError.error && <Form.Label className="text-danger">{passwordError.errorMessage}</Form.Label>}
             <Form.Control type="password" placeholder="Password" onBlur={(e) => {
               passwordValidation(e.target.value)
-
             }} onChange={e => setPassword(e.target.value)} />
           </Form.Group>
-
-        </Form.Row>
-
-        <Form.Row>
+      
           <Form.Group as={Col} controlId="formGridConfirm Password">
             {confirmPasswordError.error && <Form.Label className="text-danger">{confirmPasswordError.errorMessage}</Form.Label>}
 
@@ -158,11 +187,11 @@ export default function Signup(props) {
             }} onChange={e => setConfirmPassword(e.target.value)} />
           </Form.Group>
         </Form.Row>
+
+        <Form.Label>Phone Number</Form.Label>
         <Form.Row>
-
           <Form.Group as={Col} controlId="formGridPhoneNo">
-
-            <Form.Control name="phoneNumber" type="text" placeholder="000-000-0000" onChange={e => setPhoneNumber(e.target.value)} />
+            <Form.Control name="phoneNumber" type="text" placeholder="( ### ) ###-####" onChange={e => setPhoneNumber(e.target.value)} />
           </Form.Group>
         </Form.Row>
 
@@ -186,7 +215,7 @@ export default function Signup(props) {
 
 
           <Form.Group as={Col} controlId="formGridState">
-            
+
             <Form.Control name="state" as="select" defaultValue="Choose...">
               <option value={null}>State...</option>
               {states.map((state, i) => {
@@ -197,8 +226,8 @@ export default function Signup(props) {
           </Form.Group>
 
           <Form.Group as={Col} controlId="formGridZip">
-            
-            <Form.Control name="zipCode" placeholder="Zip Code"/>
+
+            <Form.Control name="zipCode" placeholder="Zip Code" />
           </Form.Group>
 
         </Form.Row>
@@ -229,10 +258,10 @@ export default function Signup(props) {
         </Form.Row>
         {FormError.error && <Form.Label className="text-danger">{FormError.errorMessage}</Form.Label>}
         <Form.Row>
-          {!props.isLoading && <Button variant="primary" type="submit" >
+          {!props.isLoading && <Button className="signupButton w-50" as={Col} variant="primary" type="submit" >
             Submit
           </Button>}
-          {props.isLoading && <Spinner animation="border" variant="primary" /> }
+          {props.isLoading && <Spinner animation="border" variant="primary" />}
         </Form.Row>
 
       </Form>

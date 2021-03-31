@@ -16,10 +16,7 @@ export default class Footer extends Component {
                   Simple as "One & Done"
             </Card.Text>
                 <Card.Text>
-                  <Link to="/contact">Contact</Link>
-                </Card.Text>
-                <Card.Text>
-                  <Link to="/aboutUs">About Us</Link>
+                  <Link to="/contact">Contact</Link> | <Link to="/aboutUs">About Us</Link>
                 </Card.Text>
               </Card.Footer>
             </Card>

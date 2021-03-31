@@ -10,11 +10,10 @@ export default class Medical_Assistant extends Component {
     return (
       <div>
         <Card className="courseCard">
-          <Card.Img className="courseImg" variant="top" src={slide1} />
           <Card.Body>
-            <Card.Title className="courseTitle">Medical Assistant</Card.Title>
+            <Card.Title className="courseTitle">Medical Assistant | $2500</Card.Title>
             <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
-            <Card.Subtitle className="coursePrice">$2500</Card.Subtitle>
+            {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
               Medical Assistants are critical team members at hospitals, urgent cares, diagnostic laboratories and blood donor centers.
               As advancements in healthcare/medical field rise, there will be a need for more MA's .
@@ -28,8 +27,9 @@ export default class Medical_Assistant extends Component {
               To complete your certification you will need to finish all the chapters in the program and complete the final exam.
               You can not skip chapters and must complete them in the ordered. All of your progress is auto-saved. You can take this course 24/7.
             </Card.Text>
-            <Button className="courseB" variant="primary" href="/applyNow">Apply Now</Button>
+            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
           </Card.Body>
+          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>
         </Card>
       </div>
     )

@@ -10,10 +10,9 @@ export default class Instructor_Course extends Component {
     return (
       <div>
         <Card className="courseCard">
-          <Card.Img className="courseImg" variant="top" src={slide1} />
           <Card.Body>
-            <Card.Title className="courseTitle">Instructor</Card.Title>
-            <Card.Subtitle className="coursePrice">$350</Card.Subtitle>
+            <Card.Title className="courseTitle">Instructor Course | $350</Card.Title>
+            {/* <Card.Subtitle className="coursePrice">$350</Card.Subtitle> */}
             <Card.Text className="courseDescription">
               We are proud to offer a phlebotomy instructor online Course.
               This course is available to all individuals who have successfully completed previous medical training and are up-to-date on their certification.
@@ -26,9 +25,9 @@ export default class Instructor_Course extends Component {
               Even though the quizzes are also graded, their main purpose is to prepare you by highlighting the areas you know well,
               or point you to the materials you may want to spend a little more time reviewing.
             </Card.Text>
-            <Button className="courseB" variant="primary" href="/applyNow">Apply Now</Button>
+            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
           </Card.Body>
-        </Card>
+          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
       </div>
     )
   }

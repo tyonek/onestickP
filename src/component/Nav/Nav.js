@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Nav, NavDropdown, Navbar } from 'react-bootstrap';
+import logo from '../../assets/photos/logo.jpg';
+import '../Nav/Nav.css'
 
 
 export default class NavBar extends Component {
@@ -9,16 +11,24 @@ export default class NavBar extends Component {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
 
     return (
-      <div>
+      <div className="navControl">
 
         <Navbar bg="dark" expand="lg">
-          <Navbar.Brand href="/" className="text-light">OneStick</Navbar.Brand>
+          <Navbar.Brand href="/" className="text-light">
+            <img
+              alt=""
+              src={logo}
+              width="30"
+              height="30"
+              className="d-inline-block align-top"
+            />{' '}
+            OneStick</Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
-             
-              <NavDropdown className="text-light"  title="Courses"  id="nav-dropdown">
+
+              <NavDropdown className="text-light" title="Courses" id="nav-dropdown">
                 <NavDropdown.Item href="/phlebotomycourse" eventKey="4.1">Phlebotomy</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/paramdeical_examiningcourse" eventKey="4.2">Paramedical Examining+</NavDropdown.Item>
@@ -48,7 +58,7 @@ export default class NavBar extends Component {
 
 
             </Nav>
-           
+
           </Navbar.Collapse>
         </Navbar>
 
@@ -62,7 +72,7 @@ export default class NavBar extends Component {
 
 
 
-      
+
       </div>
     );
   }

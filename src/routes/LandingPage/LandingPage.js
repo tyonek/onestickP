@@ -28,7 +28,7 @@ export default class LandingPage extends Component {
 								src={slide1}
 								alt="First slide"
 							/>
-							<Carousel.Caption>
+							<Carousel.Caption className="slideshowCaption">
 								<h3 className="slideshowText_Header">Registration Now Open</h3>
 								<p className="slideshowText">For all courses, starting May 1st, 2021</p>
 								<Button href="/applynow" variant="danger">Apply Now</Button>
@@ -41,9 +41,10 @@ export default class LandingPage extends Component {
 								alt="Second slide"
 							/>
 
-							<Carousel.Caption>
-								<h3>Second slide label</h3>
-								<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+							<Carousel.Caption className="slideshowCaption">
+								<h3 className="slideshowText_Header">Our Mission</h3>
+								<p className="slideshowText">To make the certification process as simple and painless as possible, giving students the tools to excel in their careers.
+								Training provided consists of lecture and hands on lab time. The program is also designed to allow the most qualified healthcare professionals to become qualified certified phlebotomists.</p>
 							</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
@@ -53,7 +54,7 @@ export default class LandingPage extends Component {
 								alt="Third slide"
 							/>
 
-							<Carousel.Caption>
+							<Carousel.Caption className="slideshowCaption">
 								<h3>Third slide label</h3>
 								<p>
 									Praesent commodo cursus magna, vel scelerisque nisl consectetur.

@@ -7,11 +7,12 @@ import '../../../routes/LandingPage/LandingPage.css'
 export default class Contact extends Component {
   render() {
     return (
-      <main className="landingControl">
-      <div className="landingTop">
+      <main>
+      <div className="contactControl">
         <h1 className="landingTitle">Contact Us</h1>
         <h2 className="landingMotto">Hours: Wednesday 6pm-9pm | Saturday 9am-1pm | EST </h2>
-        <p className="messageDescription">Please leave a detailed message and we will contact with you as soon as possible.</p>
+        <p className="messageDescription">Please fill out and submit the Contact Us form and one of our 
+        Student Services Representatives will contact you shortly (usually within 24 hours, or next business day).</p>
         <Form>
           <Form.Row>
           <Form.Group as={Col} controlId="formBasicEmail">
@@ -28,7 +29,7 @@ export default class Contact extends Component {
             <Form.Label>Message</Form.Label>
             <Form.Control as="textarea" placeholder="Message..." rows={4} />
           </Form.Group>
-          <Button variant="primary" type="submit">
+          <Button className="contactButton" variant="danger" type="submit">
             Send Message
           </Button>
         </Form>

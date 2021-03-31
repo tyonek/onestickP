@@ -28,6 +28,9 @@ export default class About extends Component {
           As experienced professionals, they have interesting stories ‘as a day in the life of a phlebotomist.’ 
           Although, it can be daunting at times; it is rewarding.
           This dynamic duo also wear many other hats outside of being Phlebotomists; as mothers, wives, instructors and influencers within their social spectrum. They live and love the mantra of “work hard, play hard.”
+          One and done is the core of our foundation at OneStick Phlebotomy Service and Medical Trade School. Our goal is to bring our Phlebotomy training and service to those seeking flexibility and satisfaction in their work.
+          We want our Phlebotomists to finish our program with not only a sense of achievement, but the skills to provide high-quality technique to patients rendering laboratory services. 
+          We also offer refresher training courses to Phlebotomists; along with Medical Assistant courses and Paramedics course instruction. 
           </p>
       </div>
     )

@@ -9,11 +9,10 @@ export default class Paramedical_Examining extends Component {
       <div>
 
         <Card className="courseCard">
-          <Card.Img className="courseImg" variant="top" src={slide1} />
           <Card.Body>
-            <Card.Title className="courseTitle">Paramedical</Card.Title>
+            <Card.Title className="courseTitle">Paramedical | $2500</Card.Title>
             <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
-            <Card.Subtitle className="coursePrice">$2500</Card.Subtitle>
+            {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
               We are proud to offer a Paramedical Examining Online Course. This course is available to all individuals who have successfully completed previous medical training and are up-to-date on their certification.
               The course is approximately 10 hours in length, and can be completed in either two days or two weeks (self-paced course), depending on your schedule!
@@ -23,9 +22,9 @@ export default class Paramedical_Examining extends Component {
               You will find our online education program comprises of various subjects both broad and specific,
               however some basic knowledge is required in order to succeed in this course.
             </Card.Text>
-            <Button className="courseB" variant="primary" href="/applyNow">Apply Now</Button>
+            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
           </Card.Body>
-        </Card>
+          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
       </div>
     )
   }

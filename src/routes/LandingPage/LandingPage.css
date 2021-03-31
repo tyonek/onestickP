@@ -5,19 +5,20 @@
 }
 
 .landingControl {
-  
+  margin: 0 auto;
 }
 
 .slideshow{
   width: 70%;
   margin: 0 auto;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   box-shadow: .1rem 1.5rem 3rem .001rem;
 }
 
 .landingTop{
   padding-top: 2.5rem;
   padding-bottom: 2.5rem;
+  
 }
 .landingTitle {
  text-align: center;
@@ -34,18 +35,32 @@
   text-align: center;
 }
 
+.slideshowCaption {
+background-color: rgba(0, 0, 0, 0.4);
+}
+
 .slideshowText_Header {
+
  font-size: 50px;
- color: rgb(216, 10, 10);
  font-weight: bold;
 }
 
 .slideshowText {
   font-weight: bold;
-  color: rgb(216, 10, 10);
   font-size: 25px;
 }
 
 .d-block {
-  opacity: 90%;
+ 
+}
+
+.contactControl {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    width: 80%;
+    margin: 0 auto;
+}
+
+.contactButton {
+  margin: 0 auto;
 }
