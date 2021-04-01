@@ -14,7 +14,7 @@ import Footer from '../src/component/Footer/Footer';
 import Contact from './component/Footer/Contact/Contact';
 import About from './component/Footer/About/About';
 import { Row, Col } from 'react-bootstrap';
-import './App.css'
+import './App.css';
 export default class App extends Component {
   render(){
     return(
