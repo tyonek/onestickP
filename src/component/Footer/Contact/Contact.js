@@ -9,8 +9,8 @@ export default class Contact extends Component {
     return (
       <main>
       <div className="contactControl">
-        <h1 className="landingTitle">Contact Us</h1>
-        <h2 className="landingMotto">Hours: Wednesday 6pm-9pm | Saturday 9am-1pm | EST </h2>
+        <h1 className="landingTitle h1">Contact Us</h1>
+        <h2 className="landingMotto h2">Hours: Wednesday 6pm-9pm | Saturday 9am-1pm | EST </h2>
         <p className="messageDescription">Please fill out and submit the Contact Us form and one of our 
         Student Services Representatives will contact you shortly (usually within 24 hours, or next business day).</p>
         <Form>

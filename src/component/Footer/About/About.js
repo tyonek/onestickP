@@ -13,7 +13,7 @@ export default class About extends Component {
         <Container>
           <Row>
             <Col>
-              <Image className="aboutHeadshot" alt="Vanessa&Shannon" src={headshotblank} roundedCircle />
+              <Image className="aboutHeadshot img-fluid rounded" alt="Vanessa&Shannon" src={headshotblank} roundedCircle />
             </Col>
           </Row>
         </Container>
