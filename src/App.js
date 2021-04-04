@@ -14,13 +14,25 @@ import Footer from '../src/component/Footer/Footer';
 import Contact from './component/Footer/Contact/Contact';
 import About from './component/Footer/About/About';
 import { Row, Col } from 'react-bootstrap';
+import {withRouter} from 'react-router-dom'
 import './App.css';
-import Students from '../src/routes/Students/Students';
-export default class App extends Component {
+class App extends Component {
+state={
+  isLoggedIn:true,
+}
+
+ setIsLoggedIn = (login)=>{
+ this.setState({isLoggedIn:login})
+ if(!login)
+ this.props.history.push('/');
+}
+
+
+
   render(){
     return(
       <div >
-        <NavBar />
+        <NavBar isLoggedIn={this.state.isLoggedIn} />
         
         <div style={{height:"auto", marginBottom:"170px" ,paddingBottom:"10px"}}>
           <Switch>
@@ -49,3 +61,4 @@ export default class App extends Component {
   }
 }
 
+export default withRouter (App);

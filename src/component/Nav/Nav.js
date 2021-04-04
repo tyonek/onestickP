@@ -44,11 +44,20 @@ export default class NavBar extends Component {
             <Nav className="ml-auto">
 
 
+             {this.props.isLoggedIn ? 
+              <Nav.Item >
+                <Nav.Link href="/">
+                    <Button variant="outline-danger" onClick={() => this.props.setIsLoggedIn(false)}>Log Out</Button>
+                </Nav.Link>
+              </Nav.Item>
+              :
               <Nav.Item >
                 <Nav.Link href="/Login">
                   <Button variant="outline-primary">Login</Button>
                 </Nav.Link>
               </Nav.Item>
+              
+              }
 
               <Nav.Item >
                 <Nav.Link href="/applynow">
