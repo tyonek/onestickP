@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
-import slide1 from '../../../assets/photos/bloodwork.jpg';
+import pic11 from '../../../assets/photos/pic11.jpg';
 
 
 export default class Ceu extends Component {
@@ -20,7 +20,7 @@ export default class Ceu extends Component {
               This phlebotomy continuing education course is intended to help students meet requirements to renew existing phlebotomy licenses or certification.
               Please note that this is not a replacement for a phlebotomy training program that will actively prepare you to become a phlebotomist.
             </Card.Text>
-            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
+            <Card.Img className="courseImg w-50" variant="top" src={pic11} />
           </Card.Body>
           <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
       </div>

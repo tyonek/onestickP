@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
-import slide1 from '../../../assets/photos/bloodwork.jpg';
+import pic6 from '../../../assets/photos/pic6.jpg';
 
 
 export default class Instructor_Course extends Component {
@@ -25,7 +25,7 @@ export default class Instructor_Course extends Component {
               Even though the quizzes are also graded, their main purpose is to prepare you by highlighting the areas you know well,
               or point you to the materials you may want to spend a little more time reviewing.
             </Card.Text>
-            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
+            <Card.Img className="courseImg w-50" variant="top" src={pic6} />
           </Card.Body>
           <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
       </div>

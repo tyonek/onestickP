@@ -15,6 +15,7 @@ import Contact from './component/Footer/Contact/Contact';
 import About from './component/Footer/About/About';
 import { Row, Col } from 'react-bootstrap';
 import './App.css';
+import Students from '../src/routes/Students/Students';
 export default class App extends Component {
   render(){
     return(
@@ -37,6 +38,7 @@ export default class App extends Component {
             <Route path={'/instructorcourse'} component={Instructor_Course} />
             <Route path={'/contact'} component={Contact} />
             <Route path={'/aboutUs'} component={About} />
+            <Route path={'/student/'} component={Students} />
           </Switch>
         </div>
         <div className="footer position-sticky" >
