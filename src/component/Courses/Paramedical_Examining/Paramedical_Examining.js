@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
-import slide1 from '../../../assets/photos/bloodwork.jpg';
+import pic8 from '../../../assets/photos/pic8.png';
 export default class Paramedical_Examining extends Component {
   render() {
     return (
@@ -10,7 +10,7 @@ export default class Paramedical_Examining extends Component {
 
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Paramedical | $2500</Card.Title>
+            <Card.Title className="courseTitle">Paramedical | $1600</Card.Title>
             <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
@@ -22,7 +22,7 @@ export default class Paramedical_Examining extends Component {
               You will find our online education program comprises of various subjects both broad and specific,
               however some basic knowledge is required in order to succeed in this course.
             </Card.Text>
-            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
+            <Card.Img className="courseImg w-50" variant="top" src={pic8} />
           </Card.Body>
           <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
       </div>

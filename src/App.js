@@ -50,6 +50,7 @@ state={
             <Route path={'/instructorcourse'} component={Instructor_Course} />
             <Route path={'/contact'} component={Contact} />
             <Route path={'/aboutUs'} component={About} />
+            <Route path={'/student/'} component={Students} />
           </Switch>
         </div>
         <div className="footer position-sticky" >
