@@ -32,7 +32,7 @@ state={
   render(){
     return(
       <div >
-        <NavBar isLoggedIn={this.state.isLoggedIn} />
+        <NavBar isLoggedIn={this.state.isLoggedIn}  setIsLoggedIn={this.setIsLoggedIn}/>
         
         <div style={{height:"auto", marginBottom:"170px" ,paddingBottom:"10px"}}>
           <Switch>

@@ -46,7 +46,7 @@ export default class NavBar extends Component {
 
              {this.props.isLoggedIn ? 
               <Nav.Item >
-                <Nav.Link href="/">
+                <Nav.Link >
                     <Button variant="outline-danger" onClick={() => this.props.setIsLoggedIn(false)}>Log Out</Button>
                 </Nav.Link>
               </Nav.Item>
