@@ -27,9 +27,22 @@ const loginUser = (incomingData) => instance({
 
     }
 })
+const contactUs = (incomingData) => instance({
+    'method': 'POST',
+    'url': '/students/contactus',
+    "data": incomingData,
+    'headers': {
+        'content-type': 'application/json',
+
+    }
+})
+
+
+
 export {
     getStudentsData,
     postStudentData,
-    loginUser
+    loginUser,
+    contactUs
 
 }
