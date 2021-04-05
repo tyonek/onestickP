@@ -22,7 +22,7 @@ export default class Ceu extends Component {
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic11} />
           </Card.Body>
-          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
+          {!this.props.isLoggedIn &&<Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>   }     </Card>
       </div>
     )
   }

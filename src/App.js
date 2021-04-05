@@ -60,12 +60,12 @@ class App extends Component {
             </Route>
 
             <Route exact path={'/applynow'} component={ApplyNow} />
-            <Route exact path={'/phlebotomycourse'} component={Phlebotomy} />
-            <Route exact path={'/paramdeical_examiningcourse'} component={Paramedical_Examining} />
-            <Route exact  path={'/medical_assistantcourse'} component={Medical_Assistant} />
-            <Route exact path={'/ceucourse'} component={Ceu} />
-            <Route exact path={'/instructorcourse'} component={Instructor_Course} />
-            <Route exact path={'/contact'} component={Contact} />
+            <Route exact path={'/phlebotomycourse'} component={()=><Phlebotomy isLoggedIn={this.state.isLoggedIn}/>} />
+            <Route exact path={'/paramdeical_examiningcourse'} component={()=><Paramedical_Examining isLoggedIn={this.state.isLoggedIn}/>} />
+            <Route exact  path={'/medical_assistantcourse'} component={()=><Medical_Assistant isLoggedIn={this.state.isLoggedIn}/>} />
+            <Route exact path={'/ceucourse'} component={()=><Ceu isLoggedIn={this.state.isLoggedIn}/>}  />
+            <Route exact path={'/instructorcourse'} component={()=><Instructor_Course isLoggedIn={this.state.isLoggedIn}/>} />
+            <Route exact path={'/contact'} component={()=><Contact isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/aboutUs'} component={About} />
             <Route  exact path={'/students'}  component={(props)=><Students {...props} isLoggedIn={this.state.isLoggedIn}/>} />
             

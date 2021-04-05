@@ -43,7 +43,7 @@ export default class NavBar extends Component {
             </Nav>
 
 
-            
+
             <Nav className="ml-auto">
 
 
@@ -62,7 +62,7 @@ export default class NavBar extends Component {
               
               }
 
- {this.props.isLoggedIn ?  <Nav.Item >
+ { !this.props.isLoggedIn ?  <Nav.Item >
                 <Nav.Link href="/applynow">
                   <Button variant="outline-success">Apply Now</Button>
                 </Nav.Link>
