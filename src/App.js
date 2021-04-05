@@ -16,9 +16,10 @@ import About from './component/Footer/About/About';
 import { Row, Col } from 'react-bootstrap';
 import {withRouter} from 'react-router-dom'
 import './App.css';
+import Students from './routes/Students/Students'
 class App extends Component {
 state={
-  isLoggedIn:true,
+  isLoggedIn:false,
 }
 
  setIsLoggedIn = (login)=>{
