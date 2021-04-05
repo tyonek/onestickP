@@ -15,7 +15,7 @@ export default function Students(props) {
           <div>
             <CardDeck className="studentControl">
               <Card>
-                <a href="https://www.instructure.com/canvas">
+                <a target="blank" href="https://www.instructure.com/canvas">
                   <Card.Img className="student_card w-50" variant="top" src={canvas} /></a>
                 <Card.Body>
                   <Card.Title>Class Courses</Card.Title>
