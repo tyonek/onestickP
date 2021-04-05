@@ -11,9 +11,9 @@ function ContactusModal(props) {
 
             <Modal show={props.showModal} onHide={props.setShowModal}>
                 <Modal.Header closeButton>
-                    <Modal.Title>Modal heading</Modal.Title>
+                    <Modal.Title>Thank you!</Modal.Title>
                 </Modal.Header>
-                <Modal.Body>Thanks for reaching Out. We will get back to you as soon as we can!!!</Modal.Body>
+                <Modal.Body>A student representative will contact you as soon as possible.</Modal.Body>
                 <Modal.Footer>
                     <Button variant="secondary" onClick={props.setShowModal}>
                         Close
