@@ -21,7 +21,7 @@ export default class NavBar extends Component {
               width="30"
               height="30"
               className="d-inline-block align-top"
-            />{' '}
+            />
             OneStick</Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
