@@ -9,7 +9,6 @@ export default class NavBar extends Component {
 
   render() {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
-console.log(this.props.isLoggedIn);
 
     return (
       <div className="navControl">
