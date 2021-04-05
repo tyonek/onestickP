@@ -6,6 +6,8 @@ import '../Signup/Signup.css';
 export default function Signup(props) {
   const states =
     ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
+  const courses =
+    ["Phlebotomy : $800", "Medical Assistant+ : $1600", "Paramedical+ : $1600", "CEU : $300", "Instuctor Course : $350"]
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
@@ -117,7 +119,7 @@ export default function Signup(props) {
 
       <Form className="container pt-5 pb-5 px-4" onSubmit={(e) => {
         e.preventDefault();
-        const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN } = e.target
+        const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN, course } = e.target
         const studentInfo = {
           name: `${firstName} ${lastName}`,
           email,
@@ -127,10 +129,11 @@ export default function Signup(props) {
             streetAddress: `${streetAddress.value} ${apt.value}`,
             state: state.value,
             zipCode: zipCode.value,
-            city: city.value
+            city: city.value,
           },
           SSN: SSN.value,
-          emergencyContact: [{ emergencyContact: emergencyContact.value, emergencyContactPhone: emergencyContactPhone.value }]
+          emergencyContact: [{ name: emergencyContact.value, phone: emergencyContactPhone.value }],
+          course: course.value,
 
         }
         if (!emailError.error && !passwordError.error && !confirmPasswordError.error && email && password) {
@@ -209,8 +212,8 @@ export default function Signup(props) {
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Control className="signupInput" name="state" as="select" defaultValue="Choose State">
-              <option value={null}>State...</option>
+            <Form.Control className="signupInput" name="state" as="select" defaultValue="Select State...">
+              <option value={null} disabled>Select State...</option>
               {states.map((state, i) => {
                 return <option key={i} value={state}>{state}</option>
               })}
@@ -236,9 +239,24 @@ export default function Signup(props) {
           <Form.Group as={Col} controlId="formGridEmergencyContact">
             <Form.Control className="signupInput" name="emergencyContactPhone" placeholder="Phone #" />
           </Form.Group>
-
-
         </Form.Row>
+
+
+       
+       
+          <Form.Group controlId="formCourse">
+          <Form.Label>Course</Form.Label>
+            <Form.Control className="courseInput" name="course" placeholder="course" as="select" defaultValue="Select Course...">
+            <option value={null} disabled>Select Course...</option>
+              {courses.map((course, i) => {
+                return <option key={i} value={course}>{course}</option>
+              })}
+            </Form.Control>
+          </Form.Group>
+       
+
+
+
         {FormError.error && <Form.Label className="text-danger">{FormError.errorMessage}</Form.Label>}
         <Form.Row>
           {!props.isLoading && <Button className="signupButton w-50" variant="danger" type="submit" >
@@ -246,6 +264,7 @@ export default function Signup(props) {
           </Button>}
           {props.isLoading && <Spinner animation="border" variant="primary" />}
         </Form.Row>
+
 
       </Form>
 

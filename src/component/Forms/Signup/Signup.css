@@ -17,11 +17,19 @@
   text-align: center;
   border: 0;
   border: 2px solid black;
-  padding: 20px;
+  padding: 2px;
 }
 
 .contactInput {
   border: 0;
   border: 2px solid black;
   padding: 20px;
+}
+
+.courseInput {
+  text-align: center;
+  border: 0;
+  border: 2px solid black;
+
+  
 }
