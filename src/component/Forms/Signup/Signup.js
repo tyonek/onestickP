@@ -132,7 +132,7 @@ export default function Signup(props) {
             city: city.value,
           },
           SSN: SSN.value,
-          emergencyContact: [{ emergencyContact: emergencyContact.value, emergencyContactPhone: emergencyContactPhone.value }],
+          emergencyContact: [{ name: emergencyContact.value, phone: emergencyContactPhone.value }],
           course: course.value,
 
         }
@@ -242,11 +242,12 @@ export default function Signup(props) {
         </Form.Row>
 
 
-        <Form.Label>Course</Form.Label>
+       
        
           <Form.Group controlId="formCourse">
-            <Form.Control as={Col} className="courseInput" name="course" placeholder="course" as="select" defaultValue="Select Course...">
-              <option value={null} disabled>Select Course...</option>
+          <Form.Label>Course</Form.Label>
+            <Form.Control className="courseInput" name="course" placeholder="course" as="select" defaultValue="Select Course...">
+            <option value={null} disabled>Select Course...</option>
               {courses.map((course, i) => {
                 return <option key={i} value={course}>{course}</option>
               })}
