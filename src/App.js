@@ -67,13 +67,17 @@ class App extends Component {
             <Route exact path={'/instructorcourse'} component={Instructor_Course} />
             <Route exact path={'/contact'} component={Contact} />
             <Route exact path={'/aboutUs'} component={About} />
-            <Route  exact path={'/students'}  component={(props)=><Students {...props} isLoggedIn={this.state.isLoggedIn}/>} />           
+            <Route  exact path={'/students'}  component={(props)=><Students {...props} isLoggedIn={this.state.isLoggedIn}/>} />
+            
+                       
            
           
         </div>
         <div className="footer position-sticky" >
           <Footer />
         </div>
+
+        
       </div>
     )
   }
