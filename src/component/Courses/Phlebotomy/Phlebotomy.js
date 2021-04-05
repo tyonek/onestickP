@@ -20,7 +20,7 @@ export default class Phlebotomy extends Component {
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="bottom" src={pic2} />
           </Card.Body>
-          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>
+          {!this.props.isLoggedIn && <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button> }
         </Card>
       </div>
     )
