@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Route, Switch, Redirect } from 'react-router-dom';
+import { Route, Redirect } from 'react-router-dom';
 import LandingPage from './routes/LandingPage/LandingPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './component/Forms/Login/Login';
@@ -14,7 +14,6 @@ import Footer from '../src/component/Footer/Footer';
 import Contact from './component/Footer/Contact/Contact';
 import About from './component/Footer/About/About';
 import Students from './routes/Students/Students';
-import { Row, Col } from 'react-bootstrap';
 import { withRouter } from 'react-router-dom'
 import './App.css';
 class App extends Component {
@@ -53,7 +52,7 @@ class App extends Component {
             <Route
               exact path={'/'}
               component={() => (
-                <LandingPage />
+                <LandingPage isLoggedIn={this.state.isLoggedIn} />
               )} />
               <Route exact path = {'/login'}>
             {this.state.isLoggedIn ? <Redirect to={'/students'} /> : <Login setIsLoggedIn={this.setIsLoggedIn} isLoggedIn={this.state.isLoggedIn}/>}

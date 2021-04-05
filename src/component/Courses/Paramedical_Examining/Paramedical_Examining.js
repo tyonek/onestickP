@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
 import pic8 from '../../../assets/photos/pic8.png';

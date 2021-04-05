@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
 import pic6 from '../../../assets/photos/pic6.jpg';
@@ -27,7 +26,8 @@ export default class Instructor_Course extends Component {
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic6} />
           </Card.Body>
-          {!this.props.isLoggedIn && <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button> }      </Card>
+          {!this.props.isLoggedIn && <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button> }      
+          </Card>
       </div>
     )
   }

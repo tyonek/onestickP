@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Button, Nav, NavDropdown, Navbar } from 'react-bootstrap';
 import logo from '../../assets/photos/logo.jpg';
 import '../Nav/Nav.css'

@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
-import { Form, Button, Col, Row, Spinner, Popover, OverlayTrigger } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Form, Button, Col, Spinner, Popover, OverlayTrigger } from 'react-bootstrap';
 import '../Signup/Signup.css';
 
 export default function Signup(props) {

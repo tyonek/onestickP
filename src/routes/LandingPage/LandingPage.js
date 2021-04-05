@@ -1,5 +1,4 @@
-import React, { Component, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component } from 'react';
 import './LandingPage.css';
 import { Button, Carousel } from 'react-bootstrap';
 import slide1 from '../../assets/photos/bloodwork.jpg';
@@ -31,8 +30,8 @@ export default class LandingPage extends Component {
 							<Carousel.Caption className="slideshowCaption">
 								<h3 className="slideshowText_Header">Registration Now Open</h3>
 								<p className="slideshowText">For all courses, starting May 1st, 2021</p>
-								<Button href="/applynow" variant="danger">Apply Now</Button>
-							</Carousel.Caption>
+								{!this.props.isLoggedIn &&<Button href="/applynow" variant="danger">Apply Now</Button> }  
+								</Carousel.Caption>
 						</Carousel.Item>
 						<Carousel.Item>
 							<img

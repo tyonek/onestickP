@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Form, Button, Col,Spinner } from 'react-bootstrap';
 import '../../../routes/LandingPage/LandingPage.css'
 import {contactUs} from '../../../services/axios'

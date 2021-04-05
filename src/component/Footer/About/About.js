@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { Container, Row, Image , Col } from 'react-bootstrap';
 import headshotblank from '../../../assets/photos/headshot.jpeg';
 import '../../../routes/LandingPage/LandingPage.css';

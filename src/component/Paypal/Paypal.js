@@ -14,27 +14,7 @@ export default function PaypalOrder(props) {
               amount: {
                 currency_code: "USD",
                 value: 800.00
-              },
-              description: "Medical Assistant",
-              amount: {
-                currency_code: "USD",
-                value: 1600.00
-              },
-              description: "Paramedical Examiner",
-              amount: {
-                currency_code: "USD",
-                value: 1600.00
-              },
-              description: "CEU",
-              amount: {
-                currency_code: "USD",
-                value: 300.00
-              },
-              description: "Instructor Course",
-              amount: {
-                currency_code: "USD",
-                value: 350.00
-              },
+              }
             }
           ]
         })
@@ -50,7 +30,7 @@ export default function PaypalOrder(props) {
   }, [])
   return (
     <div>
-      <div ref={paypal} > </div>
+      <div ref={paypal}> </div>
     </div>
   )
 }
