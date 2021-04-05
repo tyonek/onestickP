@@ -11,10 +11,9 @@ import '../Login/Login.css';
   const LoginUsers= (email,password)=>{
     setLoginError({error:false,errorMessage:""})
     loginUser({email,password})
-    .then(res=>{
-      console.log(res);
-     window.sessionStorage.setItem('token',res.data?.token)
-    //  props.history.push('/students/account');
+    .then(res=>{      
+     window.localStorage.setItem('token',res.data?.token)
+      props.history.push('/students');
     }).catch(err=>setLoginError({error:true,errorMessage:err.response?.data.errorMessage}))
   }
 
