@@ -6,7 +6,7 @@ export default function PaypalOrder(props) {
   useEffect(() => {
     window.paypal.Buttons({
       createOrder: (data, actions, err) => {
-        return actions.order.createOrder({
+        return actions.order.create({
           intent: "CAPTURE",
           purchase_units: [
             {

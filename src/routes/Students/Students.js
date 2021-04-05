@@ -33,13 +33,12 @@ export default function Students(props) {
         <Figure onClick={() => {
           setCheckout(true);
         }}>
-              <a href="https://www.paypal.com/signin?returnUri=https%3A%2F%2Fwww.paypal.com%2Fmep%2F">
                 <Figure.Image
                   width={170}
                   height={170}
                   alt="171x180"
                   src={paypal}
-                /></a>
+                />
               <Figure.Caption>
                 Paypal
           </Figure.Caption>
