@@ -9,6 +9,7 @@ export default class NavBar extends Component {
 
   render() {
     const handleSelect = (eventKey) => alert(`selected ${eventKey}`);
+console.log(this.props.isLoggedIn);
 
     return (
       <div className="navControl">
@@ -44,11 +45,20 @@ export default class NavBar extends Component {
             <Nav className="ml-auto">
 
 
+             {this.props.isLoggedIn ? 
+              <Nav.Item >
+                <Nav.Link >
+                    <Button variant="outline-danger" onClick={() => this.props.setIsLoggedIn(false)}>Log Out</Button>
+                </Nav.Link>
+              </Nav.Item>
+              :
               <Nav.Item >
                 <Nav.Link href="/Login">
                   <Button variant="outline-primary">Login</Button>
                 </Nav.Link>
               </Nav.Item>
+              
+              }
 
               <Nav.Item >
                 <Nav.Link href="/applynow">

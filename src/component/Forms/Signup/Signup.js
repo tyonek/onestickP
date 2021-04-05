@@ -209,7 +209,7 @@ export default function Signup(props) {
         </Form.Row>
         <Form.Row>
           <Form.Group as={Col} controlId="formGridState">
-            <Form.Control className="signupInput" name="state" as="select" defaultValue="Choose...">
+            <Form.Control className="signupInput" name="state" as="select" defaultValue="Choose State">
               <option value={null}>State...</option>
               {states.map((state, i) => {
                 return <option key={i} value={state}>{state}</option>

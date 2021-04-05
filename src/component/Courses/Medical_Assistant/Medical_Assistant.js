@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { Button, Card } from 'react-bootstrap';
 import '../../Courses/courses.css';
-import slide1 from '../../../assets/photos/bloodwork.jpg';
+import pic10 from '../../../assets/photos/pic10.jpg';
 
 
 export default class Medical_Assistant extends Component {
@@ -11,7 +11,7 @@ export default class Medical_Assistant extends Component {
       <div>
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Medical Assistant | $2500</Card.Title>
+            <Card.Title className="courseTitle">Medical Assistant | $1600</Card.Title>
             <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
@@ -27,7 +27,7 @@ export default class Medical_Assistant extends Component {
               To complete your certification you will need to finish all the chapters in the program and complete the final exam.
               You can not skip chapters and must complete them in the ordered. All of your progress is auto-saved. You can take this course 24/7.
             </Card.Text>
-            <Card.Img className="courseImg w-50" variant="top" src={slide1} />
+            <Card.Img className="courseImg w-50" variant="top" src={pic10} />
           </Card.Body>
           <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>
         </Card>
