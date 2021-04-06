@@ -54,10 +54,11 @@ export default class LandingPage extends Component {
 							/>
 
 							<Carousel.Caption className="slideshowCaption">
-								<h3>Third slide label</h3>
-								<p>
-									Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+								<h3 className="slideshowText_Header">Simple as One & Done</h3>
+								<p className="slideshowText">
+									We are here every step of the way, making your goals a reality.
+          			</p>
+								<Button href="/contact" variant="danger">Contact Us</Button>
 							</Carousel.Caption>
 						</Carousel.Item>
 					</Carousel>

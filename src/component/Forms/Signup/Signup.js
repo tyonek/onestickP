@@ -222,11 +222,11 @@ export default function Signup(props) {
             <Form.Control className="signupInput" name="zipCode" placeholder="Zip Code" />
           </Form.Group>
         </Form.Row>
-        <Form.Group controlId="formGridAddress2">
+        {/* <Form.Group controlId="formGridAddress2">
 
           <Form.Label>SSN</Form.Label>
           <Form.Control className="signupInput" name="SSN" placeholder="###-##-####" />
-        </Form.Group>
+        </Form.Group> */}
 
 
 
