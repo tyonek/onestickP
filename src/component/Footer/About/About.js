@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Container, Row, Image , Col } from 'react-bootstrap';
-import about2 from '../../../assets/photos/about2.jpeg';
+import headshot from '../../../assets/photos/headshot.jpeg';
 import '../../../routes/LandingPage/LandingPage.css';
 
 
@@ -12,7 +12,7 @@ export default class About extends Component {
         <Container>
           <Row>
             <Col>
-              <Image className="aboutHeadshot img-fluid rounded" alt="Vanessa&Shannon" src={about2}  />
+              <Image className="aboutHeadshot img-fluid rounded" alt="Vanessa&Shannon" src={headshot} roundedCircle />
             </Col>
           </Row>
         </Container>
