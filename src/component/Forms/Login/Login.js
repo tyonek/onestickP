@@ -14,8 +14,7 @@ function Login(props) {
     setLoginError({ error: false, errorMessage: "" })
     loginUser({ email, password })
       .then(res => {
-         setIsLoading(true);
-        console.log(res.data.usersInfo[0]);
+         setIsLoading(true);      
         props.setIsLoggedIn(true, res.data.usersInfo[0]);
        
 

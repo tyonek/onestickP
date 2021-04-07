@@ -1,9 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 
 export default function PaypalOrder(props) {
-  console.log(props.coursesPrice.slice(2,props.coursesPrice.length));
-
-
 
   const paypal = useRef()
   useEffect(() => {
