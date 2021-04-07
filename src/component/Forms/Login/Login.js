@@ -14,9 +14,13 @@ function Login(props) {
     setLoginError({ error: false, errorMessage: "" })
     loginUser({ email, password })
       .then(res => {
-        setIsLoading(true);
-        props.setIsLoggedIn(true);
+         setIsLoading(true);
+        console.log(res.data.usersInfo[0]);
+        props.setIsLoggedIn(true, res.data.usersInfo[0]);
+       
+
         window.localStorage.setItem('token', res.data?.token)
+        window.localStorage.setItem('courses', JSON.stringify (res.data.usersInfo[0].courses))
         props.history.push('/students');
       }).catch(err => {
         setIsLoading(false);

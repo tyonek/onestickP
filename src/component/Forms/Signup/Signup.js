@@ -118,7 +118,9 @@ export default function Signup(props) {
 
       <Form className="container pt-5 pb-5 px-4" onSubmit={(e) => {
         e.preventDefault();
-        const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, SSN, course } = e.target
+        const { streetAddress, apt, city, state, zipCode, emergencyContact, emergencyContactPhone, course } = e.target
+       
+
         const studentInfo = {
           name: `${firstName} ${lastName}`,
           email,
@@ -129,8 +131,7 @@ export default function Signup(props) {
             state: state.value,
             zipCode: zipCode.value,
             city: city.value,
-          },
-          SSN: SSN.value,
+          },       
           emergencyContact: [{ name: emergencyContact.value, phone: emergencyContactPhone.value }],
           course: course.value,
 

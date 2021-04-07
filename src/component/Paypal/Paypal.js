@@ -1,6 +1,9 @@
 import React, { useRef, useEffect } from 'react';
 
 export default function PaypalOrder(props) {
+  console.log(props.coursesPrice.slice(2,props.coursesPrice.length));
+
+
 
   const paypal = useRef()
   useEffect(() => {
@@ -10,10 +13,10 @@ export default function PaypalOrder(props) {
           intent: "CAPTURE",
           purchase_units: [
             {
-              description: "Phlebotomy",
+              description: `${props.coursesName}`,
               amount: {
                 currency_code: "USD",
-                value: 800.00
+                value: Number(props.coursesPrice.slice(2, props.coursesPrice.length))
               }
             }
           ]

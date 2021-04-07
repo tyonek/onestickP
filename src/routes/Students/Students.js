@@ -7,6 +7,12 @@ import PaypalOrder from '../../component/Paypal/Paypal'
 
 export default function Students(props) {
 
+let coursesInfo = typeof (props.courses) === 'object' ? props.courses : JSON.parse(props.courses);
+  let coursesName = coursesInfo.join('').split(":");
+  let coursesPrice = coursesName[1];
+
+
+
   const [checkout, setCheckout] = useState(false)
   return (
     <div >
@@ -22,7 +28,7 @@ export default function Students(props) {
                 </Card.Body>
               </Card>
               {checkout ? (
-                <PaypalOrder props={props} />
+                <PaypalOrder props={props} coursesName={coursesName[0]} coursesPrice={coursesPrice} />
               ) : (
                 <Card>
                   <Card.Img className="student_card w-50" variant="top" src={paypal}

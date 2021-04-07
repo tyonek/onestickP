@@ -19,23 +19,29 @@ import './App.css';
 class App extends Component {
   state = {
     isLoggedIn: false,
+    courses:[],
     wrapper : React.createRef()
   }
 
-  setIsLoggedIn = (login) => {
-    this.setState({ isLoggedIn: login })
+  setIsLoggedIn = (login,incomingUserInfo) => { 
+
+
+    this.setState({ isLoggedIn: login, courses:incomingUserInfo?.courses});
+
     if (!login){
       this.props.history.push('/');
       window.localStorage.removeItem('token');
-    }
-      
+      window.localStorage.removeItem('courses');
+    }   
+   
 
-
+return;    
   }
  componentDidMount () {
    const token = window.localStorage.getItem('token');
+   const courses = window.localStorage.getItem('courses');
     if (!!token) {
-    this.setState({isLoggedIn:true})
+      this.setState({ isLoggedIn: true, courses: courses })
     }
   }
 
@@ -66,7 +72,7 @@ class App extends Component {
             <Route exact path={'/instructorcourse'} component={()=><Instructor_Course isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/contact'} component={()=><Contact isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/aboutUs'} component={About} />
-            <Route  exact path={'/students'}  component={(props)=><Students {...props} isLoggedIn={this.state.isLoggedIn}/>} />
+          <Route exact path={'/students'} component={(props) => <Students {...props} courses={this.state.courses} isLoggedIn={this.state.isLoggedIn}/>} />
             
                        
            
