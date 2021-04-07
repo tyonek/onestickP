@@ -20,13 +20,13 @@ let coursesInfo = typeof (props.courses) === 'object' ? props.courses : JSON.par
         props.isLoggedIn ?
           <div>
             <CardDeck className="studentControl">
-              <Card>
+              {/* <Card>
                 <a target="blank" href="https://www.instructure.com/canvas">
                   <Card.Img className="student_card w-50" variant="top" src={canvas} /></a>
                 <Card.Body>
                   <Card.Title>Class Courses</Card.Title>
                 </Card.Body>
-              </Card>
+              </Card> */}
               {checkout ? (
                 <PaypalOrder props={props} coursesName={coursesName[0]} coursesPrice={coursesPrice} />
               ) : (
