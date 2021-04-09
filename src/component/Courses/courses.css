@@ -20,16 +20,16 @@ font-size: 30px;
 }
 
 .courseDescription {
-  text-align: center;
+  text-align: left !important;
   padding-top: 25px;
   padding-bottom: 25px;
   font-size: 20px;
-  width: 85%;
+  width: 90%;
   margin: 0 auto;
 }
 
 .courseImg{
-  border: 1px soild black;
+  text-align: center;
 }
 
 .aboutHeadshot {

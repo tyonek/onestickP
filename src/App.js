@@ -16,6 +16,7 @@ import About from './component/Footer/About/About';
 import Students from './routes/Students/Students';
 import { withRouter } from 'react-router-dom'
 import './App.css';
+import Info from './routes/Info/Info'
 class App extends Component {
   state = {
     isLoggedIn: false,
@@ -53,7 +54,7 @@ return;
       <div ref={this.state.wrapper} >
         <NavBar isLoggedIn={this.state.isLoggedIn} setIsLoggedIn={this.setIsLoggedIn} />
 
-        <div style={{ height: "auto", minHeight: "70vh ", marginBottom: "170px", paddingBottom: "10px" }}>
+        <div style={{ height: "auto", minHeight: "70vh " }}>
           
             <Route
               exact path={'/'}
@@ -72,6 +73,7 @@ return;
             <Route exact path={'/instructorcourse'} component={()=><Instructor_Course isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/contact'} component={()=><Contact isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/aboutUs'} component={About} />
+            <Route exact path={'/info'} component={Info} />
           <Route exact path={'/students'} component={(props) => <Students {...props} courses={this.state.courses} isLoggedIn={this.state.isLoggedIn}/>} />
             
                        

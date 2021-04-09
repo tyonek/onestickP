@@ -1,22 +1,23 @@
 import React, { Component } from 'react';
 import { Container, Row, Image , Col } from 'react-bootstrap';
-import headshot from '../../../assets/photos/headshot.jpeg';
-import '../../../routes/LandingPage/LandingPage.css';
+import about2 from '../../../assets/photos/about2.jpeg';
+import '../About/About.css';
 
 
 export default class About extends Component {
   render() {
     return (
-      <div className="landingTop">
-        <h1 className="landingTitle">About Us</h1>
+      <div className="aboutControl">
+      <div className="aboutTop" >
+      <h1 className="aboutTitle">About Us</h1>
         <Container>
           <Row>
             <Col>
-              <Image className="aboutHeadshot img-fluid rounded" alt="Vanessa&Shannon" src={headshot} roundedCircle />
+              <Image className="aboutHeadshot img-fluid rounded" alt="Vanessa&Shannon" src={about2}  />
             </Col>
           </Row>
         </Container>
-        <p className="courseDescription">Shanon and Vanessa are natives of Philadelphia, PA. They both have careers in Phlebotomy and over 30 years of experience. 
+        <p className="aboutDescription">Shanon and Vanessa are natives of Philadelphia, PA. They both have careers in Phlebotomy and over 30 years of experience. 
           Earlier on, Vanessa trained Shanon who was in school studying to be a Medical Laboratory Technologist (MLT) and unsure of which path to take. 
           With the dedication and support from close family, Vanessa was able to teach Shanon the phlebotomy techniques. 
           They both went on to earn certifications as Phlebotomy Instructors and have been best friends for over 30 years! 
@@ -31,6 +32,7 @@ export default class About extends Component {
           We want our Phlebotomists to finish our program with not only a sense of achievement, but the skills to provide high-quality technique to patients rendering laboratory services. 
           We also offer refresher training courses to Phlebotomists; along with Medical Assistant courses and Paramedics course instruction. 
           </p>
+      </div>
       </div>
     )
   }
