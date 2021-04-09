@@ -1,0 +1,62 @@
+.infoControl {
+  margin: 0 auto;
+  text-align: center;
+  background-color:  #b21e35;
+  padding: 20px;
+}
+
+.banner {
+  width: 100%;
+  height: 1px;
+}
+
+.banner2 {
+  width: 100%;
+  height: 1px;
+}
+
+.container1 {
+  padding-top: 15px;
+  border-radius: 25px;
+  background-color: #49464693;
+  width: 40vw;
+}
+
+.infoButton {
+  margin: 0 auto;
+}
+
+.infoInput {
+  background: transparent;
+  border: 0;
+  border-bottom: 2px solid#b21e35;
+  padding: 2px;
+  width:20vw;
+  margin: 0 auto;
+  color: white;
+}
+
+.infoTitle {
+  color: white;
+  width: 30vw;
+  margin: 0 auto;
+}
+
+::placeholder {
+  color: white;
+}
+
+.infoReq {
+  color: white;
+}
+
+.logo2 {
+  display:inline-block;
+  position: relative;
+  
+}
+
+.infoLine {
+    display: flex;
+    justify-content: space-between;
+}

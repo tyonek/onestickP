@@ -73,8 +73,8 @@ return;
             <Route exact path={'/instructorcourse'} component={()=><Instructor_Course isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/contact'} component={()=><Contact isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/aboutUs'} component={About} />
+            <Route exact path={'/students'} component={(props) => <Students {...props} courses={this.state.courses} isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/info'} component={Info} />
-          <Route exact path={'/students'} component={(props) => <Students {...props} courses={this.state.courses} isLoggedIn={this.state.isLoggedIn}/>} />
             
                        
            
@@ -83,7 +83,6 @@ return;
         <div className="footer position-sticky" >
           <Footer />
         </div>
-
         
       </div>
     )
