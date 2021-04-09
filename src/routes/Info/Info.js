@@ -4,20 +4,24 @@ import '../Info/Info.css';
 
 export default function Info(props) {
   const courses =
-    ["Phlebotomy : $800", "Medical Assistant+ : $1600", "Paramedical+ : $1600", "CEU : $300", "Instuctor Course : $350"]
+    ["Phlebotomy", "Medical Assistant+", "Paramedical+", "CEU", "Instuctor Course"]
   return (
     <div className="signupControl">
+      <Form className="container pt-5 pb-5 px-4">
       <Form.Label>Full Name</Form.Label>
       <Form.Row>
         <Form.Group as={Col} controlId="formGridFirstName">
           <Form.Control className="signupInput" type="text" placeholder="First Name" />
         </Form.Group>
+        </Form.Row>
+        
+        <Form.Row>
         <Form.Group as={Col} controlId="formGridLastName">
           <Form.Control className="signupInput" type="text" placeholder="Last Name"/>
         </Form.Group>
-      </Form.Row>
+        </Form.Row>
 
-      <Form className="container pt-5 pb-5 px-4">
+    
         <Form.Row>
           <Form.Label className="text-danger"></Form.Label>
         </Form.Row>
@@ -38,7 +42,7 @@ export default function Info(props) {
         </Form.Row>
 
         <Form.Group controlId="formCourse">
-          <Form.Label>Course</Form.Label>
+          <Form.Label>Course Desired</Form.Label>
           <Form.Control className="courseInput" name="course" placeholder="course" as="select" defaultValue="Select Course...">
             <option value={null} disabled>Select Course...</option>
             {courses.map((course, i) => {
