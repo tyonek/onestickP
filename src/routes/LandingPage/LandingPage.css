@@ -1,18 +1,21 @@
-*{
+/* *{
   box-sizing: border-box;
   padding:0;
   margin: 0;
-}
+} */
 
 .landingControl {
   margin: 0 auto;
+  background-image: linear-gradient(#b21e35,#6e1423);
+  padding-bottom: 10rem;
+  color: white
 }
 
 .slideshow{
   width: 70%;
   margin: 0 auto;
   /* border: 1px solid black; */
-  box-shadow: .1rem 1.5rem 3rem .001rem;
+  box-shadow: black .1rem 1.5rem 3rem .001rem;
 }
 
 .landingTop{

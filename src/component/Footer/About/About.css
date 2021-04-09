@@ -3,7 +3,9 @@
   background-image: linear-gradient(red,rgb(250, 250, 250));
 }
 .aboutTop{
+  border-radius: 5px;
   background-color: rgb(250, 250, 250);
+  box-shadow: rgba(0, 0, 0, 0.801) .1rem 1.5rem 3rem .001rem;
 }
 
 .aboutDescription {
@@ -20,6 +22,7 @@
   text-align: center;
   font-weight: bold;
   font-size: 5vw;
+  text-decoration: underline;
   /* color: white; */
  }
 

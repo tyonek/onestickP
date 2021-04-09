@@ -1,3 +1,10 @@
+.studentControl {
+  padding-top: 2.5rem;
+  padding-bottom:2.5rem;
+  align-items: center;
+  background-color:  #6e1423;
+}
+
 .studentIcons {
   padding: 100px;
   cursor: pointer;
@@ -7,7 +14,63 @@
   margin: 0 auto;
 }
 
-.studentControl {
+.studentName_Profile{
   text-align: center;
   margin: 0 auto;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.m-t-15 {
+  cursor: pointer;
+  padding-bottom: 1rem;
+}
+
+.img-radius {
+  width: 24.2vw;
+  margin: 0 auto;
+  border-radius: 25px;
+}
+
+.user-image{
+padding-top: 10px;
+padding-bottom: 10px;
+/* box-shadow: rgba(0, 0, 0, 0.315) .1rem 1.5rem 3rem .001rem; */
+}
+
+.containerStudent {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.col-md-4 {
+  margin: 0 auto;
+}
+
+.cardStudent {
+  background-color: #b21e35;
+  border: 1px solid black;
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+  box-shadow: rgba(0, 0, 0, 0.315) .1rem 1.5rem 3rem .001rem;
+}
+
+.welcomeStudent {
+  font-size:30px
+}
+
+.linkTo {
+  color:white;
+  text-decoration: underline;
+}
+
+.linkTo:hover {
+  color: #6e1423
+}
+
+.m-t-15:hover{
+  color: #6e1423;
+  font-size: 20px;
+  transition: ease-in 0.3s;
 }

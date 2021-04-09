@@ -7,7 +7,7 @@ import pic9 from '../../../assets/photos/pic9.png';
 export default class Instructor_Course extends Component {
   render() {
     return (
-      <div>
+      <div className="courseControl">
         <Card className="courseCard">
           <Card.Body>
             <Card.Title className="courseTitle">Instructor Course | $350</Card.Title>

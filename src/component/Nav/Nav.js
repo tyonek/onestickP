@@ -17,11 +17,11 @@ export default class NavBar extends Component {
             <img
               alt=""
               src={logo}
-              width="30"
-              height="30"
-              className="d-inline-block align-top"
+              width="70"
+              height="70"
+              className="d-inline-block align-top" 
             />
-            OneStick</Navbar.Brand>
+            </Navbar.Brand>
 
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">

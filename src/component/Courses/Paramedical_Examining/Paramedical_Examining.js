@@ -5,7 +5,7 @@ import pic8 from '../../../assets/photos/pic8.png';
 export default class Paramedical_Examining extends Component {
   render() {
     return (
-      <div>
+      <div className="courseControl">
 
         <Card className="courseCard">
           <Card.Body>
@@ -19,11 +19,12 @@ export default class Paramedical_Examining extends Component {
               To be a Paramedical Examiner, and have a positive impact in our health care industry you must have a minimum education in the form of a certification in phlebotomy, medical assistant, or nursing.
               Our Paramed Organization provides the first National Paramedical Examiner Certification.
               You will find our online education program comprises of various subjects both broad and specific,
-              however some basic knowledge is required in order to succeed in this course.
+              however, some basic knowledge is required in order to succeed in this course.
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic8} />
           </Card.Body>
-          <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button>        </Card>
+          {!this.props.isLoggedIn && <Button className="courseB w-50" size="lg" variant="danger" href="/applyNow">Apply Now</Button> } 
+          </Card>
       </div>
     )
   }
