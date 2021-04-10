@@ -2,7 +2,7 @@
   margin: 0 auto;
   text-align: center;
   background-color:  #b21e35;
-  padding: 20px;
+  
 }
 
 .banner {
@@ -27,11 +27,12 @@
 }
 
 .infoInput {
+  display: block;
   background: transparent;
   border: 0;
-  border-bottom: 2px solid#b21e35;
+  border-bottom: 2px solid#fcfbfb;
   padding: 2px;
-  width:20vw;
+  width:70% !important;
   margin: 0 auto;
   color: white;
 }
@@ -59,4 +60,10 @@
 .infoLine {
     display: flex;
     justify-content: space-between;
+}
+
+.slideshow{
+  margin: 100px auto;
+  width: 100%;
+  height: auto;
 }

@@ -17,14 +17,15 @@ export default function Info(props) {
 
   return (
     <div>
-      <div className="infoControl">
+      <div className="infoControl  ">
+        <div className="container">
         <img className="banner" src={oneStickBanner}></img>
-        <h1 className="infoTitle">Get Information About Our Online Certification Course</h1>
+        <h1 className="h1 text-white">Get Information About Our Online Certification Course</h1>
         <img className="banner2" src={oneStickBanner}></img>
         <p className="infoReq">If you have your high school diploma or GED, and you're looking to start a career as a Certified Phlebotomy Technician, Medical Assistant, Paramedic, or a Certified Phlebotomy Instructor fill out the form to get information on enrollment into our courses!</p>
-        <div className="infoLine">
-          <img className="logo2" src={onesticklogo2}></img>
-          <Form className="container1 pt-5 pb-5 px-4" onSubmit={(e) => {
+        <div className="infoLine row">
+          <img className="logo2"className="col" src={onesticklogo2}></img>
+          <Form className="container1 pt-5 pb-5 " className="col" onSubmit={(e) => {
             e.preventDefault();
             const { fName, lName, email, phoneNumber, course } = e.target;
             const data = {
@@ -57,14 +58,14 @@ export default function Info(props) {
               </Form.Group>
             </Form.Row>
 
-            <Form.Label></Form.Label>
+           
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Control className="infoInput" type="email" placeholder="Email" name="email" />
+                <Form.Control className="infoInput w-100" type="email" placeholder="Email" name="email" />
               </Form.Group>
             </Form.Row>
 
-            <Form.Label></Form.Label>
+            
             <Form.Row>
               <Form.Group as={Col} controlId="formGridPhoneNo">
                 <Form.Control className="infoInput" name="phoneNumber" type="text" placeholder="Phone Number" name="phoneNumber" />
@@ -92,6 +93,8 @@ export default function Info(props) {
         <ContactusModal showModal={showModal} setShowModal={setShowModal} />
       </div>
       <InfoBottom />
+        </div>
+        
     </div>
   )
 }
