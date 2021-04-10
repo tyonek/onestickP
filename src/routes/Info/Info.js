@@ -31,7 +31,7 @@ export default function Info(props) {
               }
               getInfo(data).then(res=>{
                 console.log(res);
-                if(!res.accepted){
+                if(!res.data.accepted){
                  return console.alert("Ooops Somthing Went Wrong")
                 }
                 
