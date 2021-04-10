@@ -36,6 +36,15 @@ const contactUs = (incomingData) => instance({
 
     }
 })
+const getInfo = (incomingData) => instance({
+    'method': 'POST',
+    'url': '/students/getInfo',
+    "data": incomingData,
+    'headers': {
+        'content-type': 'application/json',
+
+    }
+})
 
 
 
@@ -43,6 +52,6 @@ export {
     getStudentsData,
     postStudentData,
     loginUser,
-    contactUs
+    contactUs,getInfo
 
 }
