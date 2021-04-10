@@ -10,11 +10,11 @@ export default class Paramedical_Examining extends Component {
         <Card className="courseCard">
           <Card.Body>
             <Card.Title className="courseTitle">Paramedical | $1600</Card.Title>
-            <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
+            <Card.Subtitle className="courseAlt">includes Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
               We are proud to offer a Paramedical Examining Online Course. This course is available to all individuals who have successfully completed previous medical training and are up-to-date on their certification.
-              The course is designed to give you flexibility and limit time constraints to work with any busy schedule. Upon completion, students will be skilled in all techniques necessary to enter into the insurance examining field.
+              Upon completion, students will be skilled in all techniques necessary to enter into the insurance examining field.
               To be a Paramedical Examiner, and have a positive impact in our health care industry you must have a minimum education in the form of a certification in phlebotomy, medical assistant, or nursing.
               Our Paramed Organization provides the first National Paramedical Examiner Certification.
               You will find our online education program comprises various subjects both broad and specific,

@@ -11,7 +11,7 @@ export default class Medical_Assistant extends Component {
         <Card className="courseCard">
           <Card.Body>
             <Card.Title className="courseTitle">Medical Assistant | $1600</Card.Title>
-            <Card.Subtitle className="courseAlt">+ Phlebotomy</Card.Subtitle>
+            <Card.Subtitle className="courseAlt">includes Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
             Medical Assistants are critical team members at hospitals, urgent care, diagnostic laboratories, and blood donor centers. 
