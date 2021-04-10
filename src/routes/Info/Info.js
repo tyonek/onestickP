@@ -21,27 +21,27 @@ export default function Info(props) {
             <Form.Label></Form.Label>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridFirstName">
-                <Form.Control className="infoInput" type="text" placeholder="First Name" />
+                <Form.Control className="infoInput" type="text" placeholder="First Name" required/>
               </Form.Group>
             </Form.Row>
 
             <Form.Row>
               <Form.Group as={Col} controlId="formGridLastName">
-                <Form.Control className="infoInput" type="text" placeholder="Last Name" />
+                <Form.Control className="infoInput" type="text" placeholder="Last Name" required/>
               </Form.Group>
             </Form.Row>
 
             <Form.Label></Form.Label>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridEmail">
-                <Form.Control className="infoInput" type="email" placeholder="Email" />
+                <Form.Control className="infoInput" type="email" placeholder="Email" required/>
               </Form.Group>
             </Form.Row>
 
             <Form.Label></Form.Label>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridPhoneNo">
-                <Form.Control className="infoInput" name="phoneNumber" type="text" placeholder="Phone Number" />
+                <Form.Control className="infoInput" name="phoneNumber" type="text" placeholder="Phone Number" required/>
               </Form.Group>
             </Form.Row>
 
