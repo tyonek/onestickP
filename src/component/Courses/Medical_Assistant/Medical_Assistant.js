@@ -16,11 +16,9 @@ export default class Medical_Assistant extends Component {
             <Card.Text className="courseDescription">
             Medical Assistants are critical team members at hospitals, urgent care, diagnostic laboratories, and blood donor centers. 
             As advancements in the healthcare/medical field rise, there will be a need for more MA's. 
-            It is an amazing, and exciting time to begin a career in the thriving healthcare field. Earning your Medical Assistants Certification (MMA) 
+            It is an amazing, and exciting time to begin a career in the thriving healthcare field. Earning your Medical Assistants (MA) 
             certification from OneStick Phlebotomy Service can give employers confidence in your skills and abilities. 
-            At times MA's can be very overwhelmed, and frustrated due to the workload or simply just not having a good day. 
-            It is their duty to be professional at all times despite their moods. However, set yourself up for success and reach your career goals in the rewarding healthcare industry. Just like any other position, 
-            there are obstacles, but it's up to the individual to be successful in their careers. So let's sign yourself up and join OneStick Phlebotomy Service to help you fulfill the dream of becoming a "Medical Assistant"! 
+            So let's sign yourself up and join OneStick Phlebotomy Service to help you fulfill the dream of becoming a "Medical Assistant"! 
             To complete your certification you will need to finish all the chapters in the program and complete the final exam. You can not skip chapters and must complete them in order. All of your progress is auto-saved. You can take this course 24/7.
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic6} />
