@@ -20,9 +20,9 @@ export default class Footer extends Component {
                 </Card.Text>
                 <div class="row justify-content-center user-social-link">
                   <div class="col-auto"><a target="_blank" href="https://www.facebook.com/OneStick-Phlebotomy-Service-112848990891269"><i class="fa fa-facebook text-facebook"></i></a></div>
-                  <div class="col-auto"><a href="#!"><i class="fa fa-twitter text-twitter"></i></a></div>
-                  <div class="col-auto"><a href="#!"><i class="fa fa-instagram text-instagram"></i></a></div>
-                  <div class="col-auto"><a href="#!"><i class="fa fa-linkedin text-linkedin"></i></a></div>
+                  <div class="col-auto"><a target="_blank" href="https://twitter.com/OneStickPBT"><i class="fa fa-twitter text-twitter"></i></a></div>
+                  <div class="col-auto"><a target="_blank" href="https://www.instagram.com/onestickphlebotomyservices/"><i class="fa fa-instagram text-instagram"></i></a></div>
+                  <div class="col-auto"><a target="_blank" href="https://www.linkedin.com/in/onestick-phlebotomy-service-52b516209/"><i class="fa fa-linkedin text-linkedin"></i></a></div>
                 </div>
               </Card.Footer>
             </Card>
