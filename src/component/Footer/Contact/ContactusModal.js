@@ -15,9 +15,9 @@ function ContactusModal(props) {
                 </Modal.Header>
                 <Modal.Body>A student representative will contact you as soon as possible.</Modal.Body>
                 <Modal.Footer>
-                    <Button variant="secondary" onClick={props.setShowModal}>
+                    {/* <Button variant="secondary" onClick={props.setShowModal}>
                         Close
-          </Button>
+          </Button> */}
                     
                 </Modal.Footer>
             </Modal>

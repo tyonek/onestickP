@@ -4,13 +4,17 @@ import '../Info/Info.css';
 import oneStickBanner from '../../assets/photos/oneStickBanner.jpg';
 import InfoBottom from './InfoBottom';
 import onesticklogo2 from '../../assets/photos/onesticklogo2.png'
-
-import {getInfo } from '../../services/axios';
+import ContactusModal from '../../component/Footer/Contact/ContactusModal';
+import { getInfo } from '../../services/axios';
 
 
 export default function Info(props) {
   const courses =
     ["Phlebotomy", "Medical Assistant+", "Paramedical+", "CEU", "Instuctor Course"]
+
+  const [showModal, setShowModal] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+
   return (
     <div>
       <div className="infoControl">
@@ -20,24 +24,26 @@ export default function Info(props) {
         <p className="infoReq">If you have your high school diploma or GED, and you're looking to start a career as a Certified Phlebotomy Technician, Medical Assistant, Paramedic, or a Certified Phlebotomy Instructor fill out the form to get information on enrollment into our courses!</p>
         <div className="infoLine">
           <img className="logo2" src={onesticklogo2}></img>
-          <Form className="container1 pt-5 pb-5 px-4" onSubmit={(e)=>{
-              e.preventDefault();
-              const {fName,lName,email,phoneNumber,course} = e.target;
-              const data={
-                name:`${fName.value} ${lName.value}`,
-                email:email.value,
-                phoneNumber:phoneNumber.value,
-                course:course.value,
+          <Form className="container1 pt-5 pb-5 px-4" onSubmit={(e) => {
+            e.preventDefault();
+            const { fName, lName, email, phoneNumber, course } = e.target;
+            const data = {
+              name: `${fName.value} ${lName.value}`,
+              email: email.value,
+              phoneNumber: phoneNumber.value,
+              course: course.value,
+            }
+            setIsLoading(true)
+            getInfo(data).then(res => {
+              setShowModal(true);
+              setIsLoading(false);
+              if (!res.data.accepted) {
+                return console.alert("Ooops Somthing Went Wrong")
               }
-              getInfo(data).then(res=>{
-                console.log(res);
-                if(!res.data.accepted){
-                 return console.alert("Ooops Somthing Went Wrong")
-                }
-                
-              }).
-              catch(err=>console.log(err));
-          }}> 
+
+            }).
+              catch(err => setIsLoading(false));
+          }}>
             <Form.Label></Form.Label>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridFirstName">
@@ -61,7 +67,7 @@ export default function Info(props) {
             <Form.Label></Form.Label>
             <Form.Row>
               <Form.Group as={Col} controlId="formGridPhoneNo">
-                <Form.Control className="infoInput" name="phoneNumber" type="text" placeholder="Phone Number"  name="phoneNumber"/>
+                <Form.Control className="infoInput" name="phoneNumber" type="text" placeholder="Phone Number" name="phoneNumber" />
               </Form.Group>
             </Form.Row>
 
@@ -79,10 +85,11 @@ export default function Info(props) {
               <Button className="infoButton w-50" variant="danger" type="submit" >
                 Get Enrollment Information
         </Button>
-              {props.isLoading && <Spinner animation="border" variant="primary" />}
+              {isLoading && <Spinner animation="border" variant="secondary" />}
             </Form.Row>
           </Form>
         </div>
+        <ContactusModal showModal={showModal} setShowModal={setShowModal} />
       </div>
       <InfoBottom />
     </div>
