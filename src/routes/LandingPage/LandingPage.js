@@ -29,7 +29,7 @@ export default class LandingPage extends Component {
 							/>
 							<Carousel.Caption className="slideshowCaption">
 								<h3 className="slideshowText_Header">Registration Now Open</h3>
-								<p className="slideshowText">For all courses, starting May 1st, 2021</p>
+								<p className="slideshowText">For all courses, starting May 7th, 2021</p>
 								{!this.props.isLoggedIn &&<Button href="/applynow" variant="danger">Apply Now</Button> }  
 								</Carousel.Caption>
 						</Carousel.Item>
