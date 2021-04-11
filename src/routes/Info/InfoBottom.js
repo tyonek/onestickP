@@ -20,7 +20,7 @@ export default function InfoBottom(props) {
         <img className="banner2" src={oneStickBanner}></img>
         <div className="slideshow">
           <Carousel>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={3500}>
               <img
                 className="d-block w-100"
                 src={pic11}
@@ -31,7 +31,7 @@ export default function InfoBottom(props) {
                 <h6 className="h6">Gain a certification that is backed by the NCCT, NHA, NAPTP, and AMCA.</h6>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={3500}>
               <img
                 className="d-block w-100"
                 src={pic7}
@@ -42,7 +42,7 @@ export default function InfoBottom(props) {
                 <h6 className="h6">Over 40 hours of mobile-friendly course content, including quizzes, videos, and written lessons.</h6>
               </Carousel.Caption>
             </Carousel.Item>
-            <Carousel.Item interval={2000}>
+            <Carousel.Item interval={3500}>
               <img
                 className="d-block w-100 img-fluid"
                 src={pic8}
