@@ -26,6 +26,9 @@ export default function Students(props) {
             All required prerequisites (INCLUDING : COURSE DEPOSIT AND STUDENT FORMS) must be completed 2 weeks prior to class start date. Please 
             contact student services <Link className="linkTo" to="/contact"> here </Link>for assistance
           </p>
+          <p>
+            For payments please send to <p>CASHAPP  | $onestickphlebotomy <br></br>VENMO | @ShanonBryant-VanessaBuxton</p>
+          </p>
         </Container>
       </Jumbotron>
       {
@@ -46,14 +49,14 @@ export default function Students(props) {
                     <div class="row">
                     </div>
                   </div>
-                  {checkout ? (
+                  {/* {checkout ? (
                     <PaypalOrder props={props} coursesName={coursesName[0]} coursesPrice={coursesPrice} />
                   ) : (
                     <p className="m-t-15" variant="top" src={paypal}
                       onClick={() => {
                         setCheckout(true);
                       }}>Course Payments</p>
-                  )}
+                  )} */}
                 </div>
               </div>
             </div>

@@ -15,6 +15,7 @@ export default class Footer extends Component {
                 <Card.Text>
                   Simple as "One & Done"
             </Card.Text>
+            <Card.Text> 5300 Wynnefield Ave Philadelphia, PA 19131</Card.Text>
                 <Card.Text>
                   <Link className="footer" to="/contact">Contact</Link> | <Link className="footer" to="/aboutUs">About Us</Link>
                 </Card.Text>
