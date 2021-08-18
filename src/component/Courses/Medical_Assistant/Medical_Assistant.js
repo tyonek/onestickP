@@ -10,7 +10,7 @@ export default class Medical_Assistant extends Component {
       <div class="courseControl">
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Medical Assistant | $1600</Card.Title>
+            <Card.Title className="courseTitle">Medical Assistant | $2000</Card.Title>
             <Card.Subtitle className="courseAlt">includes Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
