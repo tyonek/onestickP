@@ -10,7 +10,7 @@ export default class Ceu extends Component {
       <div className="courseControl">
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">CEU | $300</Card.Title>
+            <Card.Title className="courseTitle">CEU | $500</Card.Title>
             <Card.Subtitle className="courseAlt">Continuing Education + Phlebotomy Refresher</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$300</Card.Subtitle> */}
             <Card.Text className="courseDescription">
