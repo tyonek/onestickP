@@ -6,7 +6,7 @@ export default function Signup(props) {
   const states =
     ["Alabama", "Alaska", "Arizona", "Arkansas", "California", "Colorado", "Connecticut", "Delaware", "District of Columbia", "Florida", "Georgia", "Hawaii", "Idaho", "Illinois", "Indiana", "Iowa", "Kansas", "Kentucky", "Louisiana", "Maine", "Maryland", "Massachusetts", "Michigan", "Minnesota", "Mississippi", "Missouri", "Montana", "Nebraska", "Nevada", "New Hampshire", "New Jersey", "New Mexico", "New York", "North Carolina", "North Dakota", "Ohio", "Oklahoma", "Oregon", "Pennsylvania", "Rhode Island", "South Carolina", "South Dakota", "Tennessee", "Texas", "Utah", "Vermont", "Virginia", "Washington", "West Virginia", "Wisconsin", "Wyoming"]
   const courses =
-    ["Phlebotomy : $800", "Medical Assistant+ : $1600", "Paramedical+ : $1600", "CEU : $300", "Instuctor Course : $350"]
+    ["Phlebotomy : $1000", "Medical Assistant+ : $2000", "Paramedical+ : $2000", "CEU : $550", "Instuctor Course : $550"]
   const [firstName, setFirstName] = useState('');
   const [lastName, setLastName] = useState('');
   const [email, setEmail] = useState('');
