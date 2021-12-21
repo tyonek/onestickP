@@ -10,7 +10,7 @@ export default class Medical_Assistant extends Component {
       <div class="courseControl">
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Medical Assistant | $2000</Card.Title>
+            <Card.Title className="courseTitle">Medical Assistant | $2375</Card.Title>
             <Card.Subtitle className="courseAlt">includes Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
@@ -20,6 +20,7 @@ export default class Medical_Assistant extends Component {
             certification from OneStick Phlebotomy Service can give employers confidence in your skills and abilities. 
             So let's sign yourself up and join OneStick Phlebotomy Service to help you fulfill the dream of becoming a "Medical Assistant"! 
             To complete your certification you will need to finish all the chapters in the program and complete the final exam. You can not skip chapters and must complete them in order. All of your progress is auto-saved. You can take this course 24/7.
+            There is a $500 non-refundable downpayment required for this course.
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic6} />
           </Card.Body>
