@@ -27,7 +27,7 @@ export default function Students(props) {
             contact student services <Link className="linkTo" to="/contact"> here </Link>for assistance
           </p>
           <p>
-            For payments please send to <p>CASHAPP  | $onestickphlebotomy <br></br>VENMO | @ShanonBryant-VanessaBuxton</p>
+            For payments please send to <p>VENMO | @ShanonBryant-VanessaBuxton</p>
           </p>
         </Container>
       </Jumbotron>
