@@ -26,9 +26,7 @@ export default function Students(props) {
             All required prerequisites (INCLUDING : COURSE DEPOSIT AND STUDENT FORMS) must be completed 2 weeks prior to class start date. Please 
             contact student services <Link className="linkTo" to="/contact"> here </Link>for assistance
           </p>
-          <p>
-            For payments please send to <p>VENMO | @ShanonBryant-VanessaBuxton</p>
-          </p>
+          
         </Container>
       </Jumbotron>
       {
