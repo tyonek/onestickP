@@ -21,7 +21,7 @@ export default function Students(props) {
     <div className="studentControl">
       <Jumbotron fluid className="cardStudent">
         <Container>
-          <h1>Classes Begin July 3rd, 2021</h1>
+          <h1>Classes begin February 2, 2022</h1>
           <p>
             All required prerequisites (INCLUDING : COURSE DEPOSIT AND STUDENT FORMS) must be completed 2 weeks prior to class start date. Please 
             contact student services <Link className="linkTo" to="/contact"> here </Link>for assistance

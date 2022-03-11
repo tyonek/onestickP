@@ -9,7 +9,7 @@ export default class Paramedical_Examining extends Component {
 
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Paramedical | $2000</Card.Title>
+            <Card.Title className="courseTitle">Paramedical | $2375</Card.Title>
             <Card.Subtitle className="courseAlt">includes Phlebotomy</Card.Subtitle>
             {/* <Card.Subtitle className="coursePrice">$2500</Card.Subtitle> */}
             <Card.Text className="courseDescription">
