@@ -29,8 +29,8 @@ export default class LandingPage extends Component {
 							/>
 							<Carousel.Caption className="slideshowCaption">
 								<h3 className="slideshowText_Header">Registration Open</h3>
-								<p className="slideshowText">Classes begin February 2, 2022</p>
-								<p lassName="slideshowText">We will be introducing new courses beginning 2022.</p>
+								<p className="slideshowText">Classes begin April 6th, 2022</p>
+								<p lassName="slideshowText">We will be introducing new courses 2022.</p>
 								{!this.props.isLoggedIn &&<Button href="/applynow" variant="danger">Apply Now</Button> }  
 								</Carousel.Caption>
 						</Carousel.Item>
