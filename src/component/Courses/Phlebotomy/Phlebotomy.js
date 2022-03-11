@@ -8,7 +8,7 @@ export default class Phlebotomy extends Component {
       <div className="courseControl">
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Phlebotomy | $1275</Card.Title>
+            <Card.Title className="courseTitle">Phlebotomy | $1000</Card.Title>
             <Card.Text className="courseDescription">
               Phlebotomy Technicians are critical team members at hospitals, urgent care, diagnostic laboratories, and blood donor centers.
               As society changes, healthcare needs to evolve and meet all new standards and provide quality care.
