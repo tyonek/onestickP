@@ -10,7 +10,7 @@ export default class Instructor_Course extends Component {
       <div className="courseControl">
         <Card className="courseCard">
           <Card.Body>
-            <Card.Title className="courseTitle">Instructor Course | $2000</Card.Title>
+            <Card.Title className="courseTitle">Instructor Course | $2500</Card.Title>
             {/* <Card.Subtitle className="coursePrice">$350</Card.Subtitle> */}
             <Card.Text className="courseDescription">
               We are proud to offer a phlebotomy instructor online course.
