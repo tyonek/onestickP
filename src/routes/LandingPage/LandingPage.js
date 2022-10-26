@@ -7,18 +7,18 @@ import slide3 from '../../assets/photos/slide3.jpg';
 
 
 
-export default class LandingPage extends Component {
-	render() {
+// export default class LandingPage extends Component {
+// 	render() {
 			
-		return (
-			<main className="landingControl">
-<p>UNDER CONSTRUCTION</p>
+// 		return (
+// 			<main className="landingControl">
+// <p>UNDER CONSTRUCTION</p>
 			
 			
-			</main>
-		);
-	}
-}
+// 			</main>
+// 		);
+// 	}
+// }
 export default class LandingPage extends Component {
 	render() {
 			
