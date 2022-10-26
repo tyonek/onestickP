@@ -30,8 +30,8 @@ export default class NavBar extends Component {
               <NavDropdown className="text-light" title="Courses" id="nav-dropdown">
                 <NavDropdown.Item href="/phlebotomycourse" eventKey="4.1">Phlebotomy</NavDropdown.Item>
                 <NavDropdown.Divider />
-                <NavDropdown.Item href="/paramdeical_examiningcourse" eventKey="4.2">Paramedical Examining+</NavDropdown.Item>
-                <NavDropdown.Divider />
+                {/* <NavDropdown.Item href="/paramdeical_examiningcourse" eventKey="4.2">Paramedical Examining+</NavDropdown.Item>
+                <NavDropdown.Divider /> */}
                 <NavDropdown.Item href="/medical_assistantcourse" eventKey="4.3">Medical Assistant+</NavDropdown.Item>
                 <NavDropdown.Divider />
                 <NavDropdown.Item href="/ceucourse" eventKey="4.4">CEU (Continuing Education)</NavDropdown.Item>

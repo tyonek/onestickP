@@ -52,7 +52,7 @@ return;
 
     return (
       <div ref={this.state.wrapper} >
-        {/* <NavBar isLoggedIn={this.state.isLoggedIn} setIsLoggedIn={this.setIsLoggedIn} /> */}
+        <NavBar isLoggedIn={this.state.isLoggedIn} setIsLoggedIn={this.setIsLoggedIn} />
 
         <div style={{ height: "auto", minHeight: "70vh " }}>
           
@@ -61,7 +61,7 @@ return;
               component={() => (
                 <LandingPage isLoggedIn={this.state.isLoggedIn} />
               )} />
-              {/* <Route exact path = {'/login'}>
+              <Route exact path = {'/login'}>
             {this.state.isLoggedIn ? <Redirect to={'/students'} /> : <Login setIsLoggedIn={this.setIsLoggedIn} isLoggedIn={this.state.isLoggedIn}/>}
             </Route>
 
@@ -74,7 +74,7 @@ return;
             <Route exact path={'/contact'} component={()=><Contact isLoggedIn={this.state.isLoggedIn}/>} />
             <Route exact path={'/aboutUs'} component={About} />
             <Route exact path={'/students'} component={(props) => <Students {...props} courses={this.state.courses} isLoggedIn={this.state.isLoggedIn}/>} />
-            <Route exact path={'/info'} component={Info} /> */}
+            <Route exact path={'/info'} component={Info} />
             
                        
            
