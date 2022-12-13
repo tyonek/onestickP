@@ -13,6 +13,15 @@ font-size: 40px;
  font-size: 20px;
 }
 
+.links{
+  color: lightblue
+}
+.links:hover{
+  color: green;
+  text-decoration: none;
+  transition: ease-in 0.5s;
+}
+
 .coursePrice {
 text-align:center;
 padding-top: 20px;

@@ -24,7 +24,7 @@
 .links:hover{
   color: green;
   text-decoration: none;
-  transition: ease-in 1s;
+  transition: ease-in 0.5s;
 }
 
 .landingTop{
