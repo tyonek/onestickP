@@ -55,7 +55,7 @@ return;
         <NavBar isLoggedIn={this.state.isLoggedIn} setIsLoggedIn={this.setIsLoggedIn} />
 
         <div style={{ height: "auto", minHeight: "70vh " }}>
-          
+        
             <Route
               exact path={'/'}
               component={() => (
