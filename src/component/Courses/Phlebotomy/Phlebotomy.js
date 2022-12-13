@@ -17,6 +17,7 @@ export default class Phlebotomy extends Component {
               Set yourself up for success and reach your career goals in the rewarding healthcare industry.
               To complete your certification you will need to go over the study guide and take the final exam.
               There is a $350 non-refundable downpayment required for this course.
+              <a href="tel:2672799461"><p>Call us at</p> (267)-279-9461</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="bottom" src={pic2} />
           </Card.Body>

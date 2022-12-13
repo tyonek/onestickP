@@ -19,6 +19,7 @@ export default class Paramedical_Examining extends Component {
               Our Paramed Organization provides the first National Paramedical Examiner Certification.
               You will find our online education program comprises various subjects both broad and specific,
               however, some basic knowledge is required in order to succeed in this course.
+              <a href="tel:2672799461"><p>Call us at</p> (267)-279-9461</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic8} />
           </Card.Body>

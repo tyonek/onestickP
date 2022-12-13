@@ -28,6 +28,8 @@ export default class LandingPage extends Component {
 			<div className="landingTop">
 				<h1 className="landingTitle">OneStick Phlebotomy Service</h1>
 				<h2 className="landingMotto">Simple as "One & Done"</h2>
+				<h3>To Apply Today!</h3>
+				<a href="tel:2672799461"><p>Call us at</p> (267)-279-9461</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
 				</div>
 
 				<div className="slideshow">
