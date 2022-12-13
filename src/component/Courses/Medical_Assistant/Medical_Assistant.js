@@ -7,7 +7,7 @@ import pic6 from '../../../assets/photos/pic6.jpg';
 export default class Medical_Assistant extends Component {
   render() {
     return (
-      <div class="courseControl">
+      <div className="courseControl">
         <Card className="courseCard">
           <Card.Body>
             <Card.Title className="courseTitle">Medical Assistant | $2375</Card.Title>
@@ -21,8 +21,8 @@ export default class Medical_Assistant extends Component {
             So let's sign yourself up and join OneStick Phlebotomy Service to help you fulfill the dream of becoming a "Medical Assistant"! 
             To complete your certification you will need to finish all the chapters in the program and complete the final exam. You can not skip chapters and must complete them in order. All of your progress is auto-saved. You can take this course 24/7.
             There is a $500 non-refundable downpayment required for this course.
-            <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> CALL</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">EMAIL</a>
-              to apply today!
+            <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> CALL</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">EMAIL </a>
+               to apply today!
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic6} />
           </Card.Body>
