@@ -18,7 +18,7 @@ export default class Ceu extends Component {
               We create customized course content designed to meet the needs of phlebotomy school faculty, with online testing available for aspiring phlebotomists.
               This phlebotomy continuing education course is intended to help students meet requirements to renew existing phlebotomy licenses or certification.
               Please note that this is not a replacement for a phlebotomy training program that will actively prepare you to become a phlebotomist.
-              <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> Call</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
+              <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> CALL</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">EMAIL</a>
               to apply today!
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic11} />

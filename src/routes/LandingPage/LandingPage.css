@@ -18,9 +18,11 @@
   box-shadow: black .1rem 1.5rem 3rem .001rem;
 }
 
+.links{
+  color: lightblue
+}
 .links:hover{
   color: green;
-  background-color: yellow;
 }
 
 .landingTop{

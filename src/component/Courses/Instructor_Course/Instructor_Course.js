@@ -16,7 +16,7 @@ export default class Instructor_Course extends Component {
               We are proud to offer a phlebotomy instructor online course.
               This course is available to all individuals who have successfully completed previous medical training and are up-to-date on their certification.
               Upon completion, you will be skilled in all techniques necessary to start teaching.
-              <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> Call</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
+              <a className="links" target="_blank" className="courseDescription" href="tel:2672799461"> CALL</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">EMAIL</a>
               to apply today!
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic9} />
