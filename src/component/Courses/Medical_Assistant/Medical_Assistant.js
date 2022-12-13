@@ -21,7 +21,7 @@ export default class Medical_Assistant extends Component {
             So let's sign yourself up and join OneStick Phlebotomy Service to help you fulfill the dream of becoming a "Medical Assistant"! 
             To complete your certification you will need to finish all the chapters in the program and complete the final exam. You can not skip chapters and must complete them in order. All of your progress is auto-saved. You can take this course 24/7.
             There is a $500 non-refundable downpayment required for this course.
-            <a href="tel:2672799461"><p>Call us at</p> (267)-279-9461</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
+            <a className="courseDescription" href="tel:2672799461"><p>Call us at</p> (267)-279-9461</a> or <a href = "mailto: Contact@Onestickphlebotomy.com">Email</a>
             </Card.Text>
             <Card.Img className="courseImg w-50" variant="top" src={pic6} />
           </Card.Body>
